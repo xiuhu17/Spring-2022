@@ -254,7 +254,66 @@ Refer to \textbf{Exercise 4.1.4}
 \end{equation*}
 
 \subsection*{4.2.8}
+\noindent The main idea is use orthonormal basis to help use calculate the innerproduct.
+\begin{proof}
+    Because we are using $\mathbb{R}$ for this question, so $|\langle v, w\rangle|^2 = \langle v, w\rangle * \overline {\langle v, w\rangle} = \langle v, w\rangle^2$. \\
+    Use the \textbf{Theorem 4.10}, and according to the example on \textbf{Page 240}:
+    \begin{denote}
+        The othonomal basis of triangonometric polynomial space is $ B_v = \{ \frac {1} {\sqrt {2 \pi}}, \frac{1}{\sqrt{\pi}} sin(ix), \frac{1}{\sqrt{\pi}} cos(jx) | i = 1, ... n \in \mathbb{N}, j = 1, ... m \in \mathbb{N} \}$. 
+        The $ith$ entry of $[f]_{B_v}$, which is under the triangonometric polynomial space is $t_i = \langle f, e_i\rangle$. 
+    \end{denote}
+    \begin{equation*}
+        \begin{split}
+            \|f\|^ 2 & = \sum_{i=1}^{i=1+m+n} | \langle v, e_i\rangle|^2 = \sum_{i=1}^{i=1+m+n}  \langle v, e_i\rangle ^2 = \sum_{i=1}^{i=1+m+n} t_i ^2 \\
+            & = {b_0 ^ 2}{2 \pi} + \sum_{k=1}^{k=n} {a_k ^2 }{\pi} + \sum_{l=1}^{l=m} {b_l ^2 }{\pi} \\
+            & \Rightarrow \|f\| = \sqrt{{b_0^2}{{2 \pi}} + \sum_{k=1}^{k=n}  {a_k ^2 }{\pi} + \sum_{l=1}^{l=m}{b_l ^2 }{\pi}}
+        \end{split}
+    \end{equation*}
+\end{proof}
 
+\subsection*{4.2.10}
+Because we are using $\mathbb{R}$ for this question, so $\forall k \in \mathbb{F}, |k|^2 = k * \overline k = k^2$.
+\subsubsection*{(a)}
+\begin{proof}
+    \begin{equation*}
+        \begin{split}
+            \|3 - 2x + x^2 \|^2 & = \langle 3 - 2x + x^2, 3 - 2x + x^2 \rangle = \int_{0}^{1} (3 - 2x + x^2) \overline {3 - 2x + x^2} \,dx \\
+                                & = \int_{0}^{1} (3 - 2x + x^2)^2 \,dx = [\frac{(x - 1)^5}{5} + \frac{4(x - 1)^3}{3} + 4x - 4 + C ]^1_0 = \frac{83}{15}
+        \end{split}
+    \end{equation*} 
+\end{proof}
+
+\subsubsection*{(b)}
+\begin{proof}
+    By refering to the conclusion on \textbf{Page 240.6}, we know that $\{1, x, x^2\}$ is not even orthogonal. Therefore, they can not bt othonomal basis. So it will not follow tht \textbf{Theorem 4.10}
+\end{proof}
+
+\subsection*{4.2.18}
+\subsubsection*{(a)}
+\begin{denote}
+    $A^*$ is the conjugate transpose of $A$. $[A]_{ij}= \overline {[A^*]_{ji}}$.
+\end{denote}
+\begin{proof}
+    Since the basis we are using is orthonomal basis.  \\ By \textbf{Theorem 4.10}:
+\begin{equation*}
+    \begin{split}
+        \langle x, y\rangle_A = \langle Ax, Ay\rangle \Rightarrow \langle e_j, e_k\rangle_A = \langle Ae_j, Ae_k\rangle = \sum_{i=1}^{i=n} 
+    \langle Ae_j, e_i \rangle \overline {\langle Ae_k, e_i \rangle} = \sum_{i=1}^{i=n} [A]_{ij}[A^*]_{ki} = [A^*A]_{kj}
+    \end{split}
+\end{equation*}
+\end{proof}
+
+\subsubsection*{(b)}
+\begin{proof}
+    Use the formula we get from \textbf{(a)}, and refer to the \textbf{Definition Of Orthonormal Basis}: 
+    \begin{equation*}
+        \begin{split}
+            & k \neq j \rightarrow 0 = \langle e_j, e_k\rangle_A = [A^*A]_{kj} = 0 = [I]_{kj} = [A^{-1}A]_{kj}\\
+            & k = j \rightarrow 1 = \langle e_j, e_j\rangle_A = [A^*A]_{jj} = 1 = [I]_{jj} = [A^{-1}A]_{jj}
+        \end{split}
+        \Rightarrow A^* = A^{-1}
+    \end{equation*}
+\end{proof}
 
 
 
