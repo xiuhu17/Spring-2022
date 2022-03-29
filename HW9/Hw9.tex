@@ -1,0 +1,333 @@
+\documentclass{article}
+\usepackage{indentfirst}
+\usepackage{geometry}
+\usepackage{ntheorem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\newtheorem*{proposition}{Proposition}
+\newtheorem*{definition}{Definition}
+\newtheorem*{corrolary}{Corrolary}
+\newtheorem*{consider}{Consider}
+\newtheorem*{theorem}{Theorem}
+\newtheorem*{suppose}{Suppose}
+\newtheorem*{notice}{Notice}
+\newtheorem*{define}{Define}
+\newtheorem*{denote}{Denote}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{claim}{Claim}
+\newtheorem*{proof}{Proof}
+\newtheorem*{case}{Case}
+%\begin{equation*} \end{equation*}%
+%\begin{equation} \end{equation}%
+%\begin{split} \end{split}%
+%\begin{cases} \end{cases}%
+%\subsubsection*{(a)}%
+%\subsection*{(a)}%
+%\textbf{}%
+%\textit{}%
+%\noindent%
+%\paragraph{}%
+%\page{}%
+%\\%
+%$\langle \rangle$%
+%$\| \|$%
+\geometry{a4paper}
+\title{Homework9}
+\author{Zhihao Wang} 
+\date{04/01/2022}
+\begin{document}
+\maketitle 
+
+\subsection*{3.7.4}
+\subsubsection*{(a)}
+Since this matrix is uppertriangular matrix $\rightarrow$ The eignvalue of the matrix is its diagonal.
+There are two different eignvalues. By \textbf{Theorem 3.8}, there are at least two independant eignvectors. By \textbf{Theorm 3.28}, 
+they are basis of $\mathbb{C}$. By \textbf{Corollary 3.16}, these two independant eignvectors can form an invertible matrix $S$. 
+So it is diagonalizable.
+
+\subsubsection*{(b)}
+Since this matrix is uppertriangular matrix $\rightarrow$ The eignvalue of the matrix is its diagonal. There are only one eignvalue which is $1$.
+We know that $Eig _\lambda T = Ker(T - \lambda I)$.
+\begin{equation*}
+    A - \lambda I = A - I \rightarrow
+    \begin {bmatrix}
+    0 & -2 & 0\\
+    0 & 0 & -2\\
+    0 & 0 & 0
+    \end {bmatrix} 
+\end{equation*}
+If we do \textbf{RREF} to this matrix:
+${\begin {bmatrix}
+0 & -2 & 0\\
+0 & 0 & -2\\
+0 & 0 & 0
+\end {bmatrix}} \Rightarrow$ 
+${\begin {bmatrix}
+0 & 1 & 0\\
+0 & 0 & 1\\
+0 & 0 & 0
+\end {bmatrix}}$.
+Apparently, there are only two pivots in this matrix. By \textbf{Theorem 3.35}, $Rank(T - \lambda I) = 2 \Rightarrow Null(T - \lambda I) = 1$ there are only one independnt eignvectors of
+matrix. By \textbf{Theorm 3.28}, It can not form an invertible matrix S, therefore, it is not diagonolizable.
+
+\subsubsection*{(c)}
+Since this matrix is uppertriangular matrix $\rightarrow$ The eignvalue of the matrix is its diagonal. There are only two eignvalue which are ${1, 2}$.
+We know that $Eig _\lambda T = Ker(T - \lambda I)$. 
+\begin{equation*}
+    A - \lambda_1 I = A - I \rightarrow
+    \begin {bmatrix}
+    2 & 0 & 1\\
+    0 & 2 & -1\\
+    0 & 0 & 0
+    \end {bmatrix} 
+\\\\
+    A - \lambda_2 I = A - 3I \rightarrow
+    \begin {bmatrix}
+    0 & 0 & 1\\
+    0 & 0 & -1\\
+    0 & 0 & -2
+    \end {bmatrix}
+\end{equation*}
+Apparently, there are two pivots in the first matrix. By \textbf{Theorem 3.35}, $Rank(T - \lambda I) = 2 \Rightarrow Null(T - \lambda I) = 1$ there is only one independnt eignvector of
+matrix. There is only one pivot in the second matrix. By \textbf{Theorem 3.35}, $Rank(T - \lambda I) = 1 \Rightarrow Null(T - \lambda I) = 2$ there are two independnt eignvectors of
+matrix. By \textbf{Theorem 3.8}, these three eignvectos are independant. By \textbf{Theorm 3.28}, It can form an invertible matrix S, therefore, it is diagonolizable.
+
+\subsubsection*{(d)}
+Since this matrix is uppertriangular matrix $\rightarrow$ The eignvalue of the matrix is its diagonal. There are only two eignvalue which are ${1, 3}$.
+We know that $Eig _\lambda T = Ker(T - \lambda I)$. 
+\begin{equation*}
+    A - \lambda_1 I = A - I \rightarrow
+    \begin {bmatrix}
+    1 & 0 & 7\\
+    0 & 0 & 8\\
+    0 & 0 & 1
+    \end {bmatrix} 
+\\\\
+    A - \lambda_2 I = A - 2I \rightarrow
+    \begin {bmatrix}
+    0 & 0 & 7\\
+    0 & -1 & 8\\
+    0 & 0 & 0
+    \end {bmatrix}
+\end{equation*}
+If we do \textbf{RREF} to the second matrix:
+$\begin {bmatrix}
+0 & 0 & 7\\
+0 & -1 & 8\\
+0 & 0 & 0
+\end {bmatrix} \Rightarrow$ 
+${\begin {bmatrix}
+0 & -1 & 8\\
+0 & 0 & 7\\
+0 & 0 & 0
+\end {bmatrix}}$.
+Apparently, there are two pivots in the first matrix. By \textbf{Theorem 3.35}, $Rank(T - \lambda I) = 2 \Rightarrow Null(T - \lambda I) = 1$ there is only one independnt eignvectors\ of
+matrix. There are two pivots in the second matrix. By \textbf{Theorem 3.35}, $Rank(T - \lambda I) = 2 \Rightarrow Null(T - \lambda I) = 1$ there is only one independnt eignvector of
+matrix. By \textbf{Theorem 3.8}, these two eignvectos are independant. By \textbf{Theorm 3.28}, It can not form an invertible matrix S, therefore, it is not diagonolizable.
+
+
+\subsection*{3.7.10}
+\subsubsection*{(a)}
+\begin{proof}
+    Prove it by doing arithmetic calculation
+    \begin{equation*}
+        \begin{split}
+            p(A)x &= (a_0I + a_1A + a_2A^2 + ... + a_nA^n)x =(a_0x + a_1 \lambda x + a_2\lambda A x + ... + a_n \lambda A^{n-1}x) \\
+            &= (a_0x + a_1 \lambda x + a_2\lambda^2 x + ... + a_n \lambda^2 A^{n-2}x) = (a_0x + a_1 \lambda x + a_2\lambda^2 x + ... + a_n \lambda^3 A^{n-3}x) \\
+            &= ...... \\
+            & = (a_0 + a_1 \lambda  + a_2\lambda^2 x + ... + a_n \lambda^n)x = p(\lambda)x
+        \end{split}
+    \end{equation*}
+\end{proof}
+Since x is eignvector of $A$, $x$ is not $\{0\}$ $\rightarrow$ $x$ is an eignvector of $p(A)$ with eignvalue $p(\lambda)$.
+
+\subsubsection*{(b)}
+\begin{proof}
+From part \textbf{(a)}: we know that $p(A)x = p(\lambda)x$. Therefore, $p(A)x = 0 \Rightarrow p(\lambda)x = 0$. Since $x \neq 0$, $p(\lambda) = 0$.
+\end{proof}
+
+\subsubsection*{(c)}
+\begin{proof}
+    From part \textbf{(b)}: we know that if $p(A)x = 0$, then $p(\lambda) = 0$. \\
+    If $p(A) = 0 \rightarrow p(A)x = 0 \rightarrow p(\lambda) = 0$
+\end{proof}
+
+\subsection*{3.7.12}
+\begin{proof}
+    \begin{denote}
+        The basis of $F^n$ as $(e_1, e_2, ..., e_n)$.
+    \end{denote}
+    We choose a random vector $e_j$ from $(e_1, e_2, ..., e_n)$. Since $A$ is an uppertriangular matrix, by \textbf{Lemma 3.68}, 
+    $Ae_j = \sum_{i = 1}^{i = j} a_ie_i$. Since it is strictly uppertriangular matrix, $a_j = 0$, we get that $Ae_j = \sum_{i = 1}^{i = j - 1} a_ie_i$. 
+    $(Ae_j)$ is $jth$ column of $A$. $(A^ke_j)$ is $jth$ column of $A^k$.
+    \begin{equation*}
+        \begin{split}
+            A^ne_j = A^{n-1}(\sum_{i = 1}^{i = j - 1} a_ie_i) &\Rightarrow A^{n-2}(AAe_j) = A^{n-2}(\sum_{i = 1}^{i = j - 1} Aa_ie_i) \\
+                   &= A^{n-2}(\sum_{i = 1}^{i = j - 1} a_iAe_i) = A^{n-2}(\sum_{i = 1}^{i = j - 1} a_i\sum_{k = 1}^{k = i - 1} b_ke_k)
+        \end{split}
+    \end{equation*}
+    $\sum_{i = 1}^{i = j - 1} a_i\sum_{k = 1}^{k = i - 1} b_ke_k \in Span(e_1, e_2, ..., e_{j-2})$.
+    So we can conclude that $A^ne_j = A^{n-2}\sum_{i = 1}^{i = j - 2}c_ie_i$.
+    \begin{equation*}
+        \begin{split}
+            A^ne_j &= A^{n-2}\sum_{i = 1}^{i = j - 2}c_ie_i \\
+                   &= A^{n-3}(\sum_{i = 1}^{i = j - 3} d_ie_i) \\
+                   &= ... \\
+                   &= A^{n-j}(\sum_{i = 1}^{i = 0} x_ie_i) \\
+                   & = 0
+        \end{split}
+    \end{equation*}
+    It is true $\forall j \in \{1, ..., n \}$. So all columns of $A^n$ are zero.
+\end{proof}
+
+\subsection*{3.7.14}
+\begin{proof}
+    \begin{suppose}
+        The dimV = n. $T^0 = I$.
+    \end{suppose}
+    If we want to find a non-zero polynomial, which is equivalent to find a list of dependent vectors. By \textbf{Theorem 2.5}, we now that $\mathcal{L(V)}$ itself is a
+    vector space. By \textbf{Corollary 3.43}, we know $dim{\mathcal{T}} = dim{V} * dim{V} = n^2$. 
+    \begin{consider}
+        Construct a List $(I, T^1, T^2, ..., T^{n^2})$. By \textbf{Proposition 3.21}, we know that the number of independent vectors in a list is at most $(\dim{V})^2 = n^2$ .
+        Since there are $n^2 + 1 > n^2$ elements in $(I, T^1, T^2, ..., T^{n^2})$, so it can not be independant, therefore it is a list of dependent vectors. 
+        By \textbf{Definition Of Linearly Dependent}, there must exist
+        a list of coefficients $(a_0, a_1, ..., a_{n^2})$ which is not all zero. It makes $\sum_{i = 0}^{i=n^2} a_iT^i = 0$. Therefore, there exists
+        a nonzero polynomial $p(x) = \sum_{i = 0}^{i=n^2} aix^i$.
+    \end{consider}
+\end{proof}
+\subsection*{4.1.2}
+\subsubsection*{(a)}
+Since the field is $\mathbb{R}$, therefore, $\langle{v}, {w} \rangle = \langle{w}, {v} \rangle $.
+\begin{equation*}
+    \begin{split}
+        3 = \|v - w\|^2 &= \langle{v-w}, {v-w} \rangle \\
+                        &= \langle{v}, {v} \rangle + \langle{w}, {w} \rangle - 2\langle{v}, {w} \rangle\\
+        7 = \|v + w\|^2 &= \langle{v+w}, {v+w} \rangle \\
+                        &= \langle{v}, {v} \rangle + \langle{w}, {w} \rangle + 2\langle{v}, {w} \rangle
+    \end{split}
+\end{equation*}
+Subtract those two equations, we will get $4 = 4\langle{v}, {w} \rangle \Rightarrow \langle{v}, {w} \rangle= 1$
+\subsubsection*{(b)}
+Use the answer from \textbf{(a)}
+\begin{equation*}
+    \begin{split}
+        & 7 = \|v + w\|^2 = \langle{v}, {v} \rangle + \langle{w}, {w} \rangle + 2 \\
+        & \Rightarrow \|v\|^2 + \|w\|^2 = 5
+    \end{split}
+\end{equation*}
+
+\subsection*{4.1.6}
+\begin{denote}
+    The $ith$ entry of $a_j$, $b_k$ are $a_{ij}$, $b_{ik}$.
+\end{denote}
+\begin{proof}
+    \begin{equation*}
+        \begin{split}
+        [A^*B]_{jk} &= \sum_{i=1}^{i=m}a^*_{ji}b_{ik} = \sum_{i=1}^{i=m} \overline{a_{ij}}b_{ik} = \sum_{i=1}^{i=m} b_{ik}\overline{a_{ij}} = \langle b_k, a_j \rangle 
+        \end{split}
+    \end{equation*}
+\end{proof}
+
+\subsection*{4.1.10}
+\begin{proof}
+Inorder to prove this will defines an inner product on $\mathbb{W}$. We need to follow the \textbf{Definition} on \textit{page 226, 227}. Since T is an isomorphism.
+\begin{denote}
+    $\forall w_1, w_2, w_3 \in \mathbb{W}, \exists v_1 = T^{-1}(w_1), v_2 = T^{-1}(w_2), v_3 = T^{-1}(w_3)$, where $v_1, v_2, v_3 \in \mathbb{V}, \forall a \in \mathbb{F}$.
+\end{denote}
+\textbf{Inner product is scalar:} Since $\mathbb{V}$ is a innerproduct vectorspace, $\langle v_1, v_2 \rangle = k \in \mathbb(F)$.
+$\forall w_1, w_2 \in \mathbb{W}$, $\langle w_1, w_2 \rangle = \langle T^{-1}(w_1), T^{-1}(w_2) \rangle = \langle v_1, v_2 \rangle = k \in \mathbb(F)$. \\
+\textbf{Distributive Law:} Since $\mathbb{V}$ is a innerproduct vectorspace, $\langle v_1+v_2, v_3 \rangle = \langle v_1, v_3 \rangle + \langle v_2, v_3 \rangle$. Therefore,
+$\langle w_1+w_2, w_3 \rangle = \langle T^{-1}(w_1) + T^{-1}(w_2), T^{-1}(w_3) \rangle = \langle v_1+v_2, v_3 \rangle = \langle v_1, v_3 \rangle + \langle v_2, v_3 \rangle
+= \langle T^{-1}(w_1), T^{-1}(w_3) \rangle + \langle T^{-1}(w_2), T^{-1}(w_3) \rangle = \langle w_1, w_3 \rangle + \langle w_2, w_3 \rangle$. \\
+\textbf{Homogenity:} Since $\mathbb{V}$ is a innerproduct vectorspace, $\langle av_1, v_2 \rangle = a\langle v_1, v_2 \rangle$. Therefore,
+$\langle aw_1, w_2 \rangle = \langle T^{-1}(aw_1), T^{-1}(w_2) \rangle = \langle aT^{-1}(w_1), T^{-1}(w_2) \rangle = \langle av_1, v_2 \rangle = a\langle v_1, v_2 \rangle =
+a\langle T^{-1}(w_1), T^{-1}(w_2) \rangle = a\langle w_1, w_2 \rangle$. \\
+\textbf{Symmetry:} Since $\mathbb{V}$ is a innerproduct vectorspace, $\langle v_1, v_2 \rangle = \overline {\langle v_2, v_1 \rangle}$. Therefore,
+$\langle w_1, w_2 \rangle = \langle T^{-1}(w_1), T^{-1}(w_2) \rangle = \langle v_1, v_2 \rangle = \overline {\langle v_2, v_1 \rangle}
+= \overline {\langle T^{-1}(w_2), T^{-1}(w_1) \rangle} = \overline {\langle w_2, w_1 \rangle}$. \\
+\textbf{Nonenegtive:} Since $\mathbb{V}$ is a innerproduct vectorspace, $\langle v_1, v_1 \rangle \ge 0$. Therefore, 
+$\langle w_1, w_1 \rangle = \langle T^{-1}(w_1), T^{-1}(w_1) \rangle = \langle v_1, v_1 \rangle \ge 0$. \\
+\textbf{Definiteness:} Since $\mathbb{V}$ is a innerproduct vectorspace, if $\langle v_1, v_1\rangle = 0 \rightarrow v_1 = 0$. Therefore,
+if $0 = \langle w_1, w_1 \rangle = \langle T^{-1}(w_1), T^{-1}(w_1) \rangle = \langle v_1, v_1 \rangle \rightarrow v_1 = 0 \rightarrow w_1 = T(v_1) = T(0) = 0$.
+\end{proof}
+\subsection*{4.1.12}
+\subsubsection*{(a)}
+\begin{proof}
+    \textbf{$\Rightarrow$} If $v = 0$, by \textbf{Theorem 4.2(3)}
+        \begin{equation*}
+            \begin{split}
+                \langle v, w \rangle = \langle 0, w \rangle = 0, \forall w \in \mathbb{V}
+            \end{split}
+        \end{equation*}
+    \textbf{$\Leftarrow$} If $\langle v, w \rangle = 0$, $\forall w \in \mathbb{V}$, by \textbf{Theorem 4.2(4)}
+        \begin{equation*}
+            \begin{split}
+                v = 0
+            \end{split}
+        \end{equation*}
+\end{proof}
+
+\subsubsection*{(b)}
+\begin{proof}
+    \textbf{$\Rightarrow$} If $v = w$
+        \begin{equation*}
+            \begin{split}
+                \langle v, u \rangle = \langle w, u \rangle = \langle w, u \rangle, \forall u \in \mathbb{V}.
+            \end{split}
+        \end{equation*}
+    \textbf{$\Leftarrow$} If $\langle v, u \rangle = \langle w, u \rangle$, $\forall u \in \mathbb{V}$. Using result from \textbf{(a)}
+        \begin{equation*}
+            \begin{split}
+                \langle v, u \rangle = \langle w, u \rangle \rightarrow \langle v-w, u \rangle = 0 \rightarrow v-w = 0 \rightarrow v = w
+            \end{split}
+        \end{equation*}
+\end{proof}
+
+\subsubsection*{(c)}
+\begin{proof}
+    \textbf{$\Rightarrow$} If $S = T$.
+    \begin{equation*}
+        \begin{split}
+            \langle Sv_1, v_2  \rangle = \langle Tv_1, v_2  \rangle, \forall v_1, v_2 \in \mathbb{V}
+        \end{split}
+    \end{equation*}
+    \textbf{$\Leftarrow$} If $\langle Sv_1, v_2  \rangle = \langle Tv_1, v_2  \rangle, \forall v_1, v_2 \in \mathbb{V}$. Using conclusion from \textbf{(a), (b)}
+    \begin{equation*}
+        \begin{split}
+            \langle Sv_1, v_2  \rangle = \langle Tv_1, v_2  \rangle &\rightarrow \langle Sv_1 - T(v_1), v_2  \rangle = 0 \\
+            &\rightarrow \forall v_2, \langle (S - T)(v_1), v_2  \rangle = 0 \\
+            &\rightarrow (S - T)(v_1) = 0 \\
+            &\rightarrow \forall v_1 , S(v_1) = T(v_1)\\
+            & S = T
+        \end{split}
+    \end{equation*}
+
+\end{proof}
+\end{document}
+% \begin{equation*}
+%     \begin{split}
+%         & (\lfloor \frac{t}{d_3} \rfloor - 2p) + f((t \mod d_3) + 2 d_3 p, 2) \\
+%         \rightarrow & (\lfloor \frac{t}{d_3} \rfloor - 2p) 
+%         + \lfloor \frac{(t \mod d_3) + 2 d_3 p}{d_2} \rfloor 
+%         + f(((t \mod d_3) + 2 d_3 p) \mod d_2, 1) \\
+%         = & (\lfloor \frac{t}{25} \rfloor - 2p) 
+%         + \lfloor \frac{(t \mod 25) + 2 \cdot 25 \cdot p}{10} \rfloor 
+%         + f(((t \mod 25) + 2 \cdot 25 \cdot p) \mod 10, 1) \\
+%         = & (\lfloor \frac{t}{25} \rfloor - 2p) 
+%         + \lfloor \frac{t \mod 25}{10} \rfloor + 5 p 
+%         + f((t \mod 25) \mod 10, 1) \\
+%         = & \lfloor \frac{t}{25} \rfloor
+%         + \lfloor \frac{t \mod 25}{10} \rfloor + 3 p 
+%         + f((t \mod 25) \mod 10, 1) 
+%     \end{split}
+%     \end{equation*}
+
+% \begin{equation}
+%     \begin{split}
+%     (a + b)^4
+%       &= (a + b)^2 (a + b)^2     \\
+%       &= (a^2 + 2ab + b^2)
+%         (a^2 + 2ab + b^2)       \\
+%       &= a^4 + 4a^3b + 6a^2b^2 + 4ab^3 + b^4
+%     \end{split}
+%    \end{equation}
