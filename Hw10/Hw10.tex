@@ -31,13 +31,40 @@
 %\\%
 %$\langle \rangle$%
 %$\| \|$%
+% \begin{equation*}
+%     \begin{split}
+%         & (\lfloor \frac{t}{d_3} \rfloor - 2p) + f((t \mod d_3) + 2 d_3 p, 2) \\
+%         \rightarrow & (\lfloor \frac{t}{d_3} \rfloor - 2p) 
+%         + \lfloor \frac{(t \mod d_3) + 2 d_3 p}{d_2} \rfloor 
+%         + f(((t \mod d_3) + 2 d_3 p) \mod d_2, 1) \\
+%         = & (\lfloor \frac{t}{25} \rfloor - 2p) 
+%         + \lfloor \frac{(t \mod 25) + 2 \cdot 25 \cdot p}{10} \rfloor 
+%         + f(((t \mod 25) + 2 \cdot 25 \cdot p) \mod 10, 1) \\
+%         = & (\lfloor \frac{t}{25} \rfloor - 2p) 
+%         + \lfloor \frac{t \mod 25}{10} \rfloor + 5 p 
+%         + f((t \mod 25) \mod 10, 1) \\
+%         = & \lfloor \frac{t}{25} \rfloor
+%         + \lfloor \frac{t \mod 25}{10} \rfloor + 3 p 
+%         + f((t \mod 25) \mod 10, 1) 
+%     \end{split}
+%     \end{equation*}
+
+% \begin{equation}
+%     \begin{split}
+%     (a + b)^4
+%       &= (a + b)^2 (a + b)^2     \\
+%       &= (a^2 + 2ab + b^2)
+%         (a^2 + 2ab + b^2)       \\
+%       &= a^4 + 4a^3b + 6a^2b^2 + 4ab^3 + b^4
+%     \end{split}
+%    \end{equation}
+
 \geometry{a4paper}
 \title{Homework10}
 \author{Zhihao Wang} 
 \date{04/08/2022}
 \begin{document}
 \maketitle 
-
 
 \subsection*{4.1.4}
 \begin{denote}
@@ -76,7 +103,7 @@ Contradiction.
     \end{split}
 \end{equation*}
 
-\subsection*{4.1.14}
+\subsection*{4.1.20}
 \begin{proof}
     $\forall v, w \in \mathbb{V}$. Use \textbf{Definition} and \textbf{Proposition 4.2.2}.
     \begin{equation*}
@@ -382,34 +409,191 @@ Refer to \textbf{Proposition 4.18}
     \end{split}
 \end{equation*}
 
+\subsection*{4.3.4}
+\subsubsection*{(a)}
+Refer to the \textbf{Theorem 4.16.8}
+\begin{equation*}
+    \begin{split}
+        &A = \begin{bmatrix}
+            3 \\
+            1 \\
+            4 
+        \end{bmatrix}\\
+        &[P_U]_\xi = A(A^*A)^{-1}A^* = \begin{bmatrix}
+            3 \\
+            1 \\
+            4  
+        \end{bmatrix} (\begin{bmatrix}
+            3 & 1 & 4 
+        \end{bmatrix} \begin{bmatrix}
+            3 \\
+            1 \\
+            4 
+        \end{bmatrix})^{-1} \begin{bmatrix}
+            3 & 1 & 4 
+        \end{bmatrix} = \frac{1}{26}\begin{bmatrix}
+                9 & 3 & 12 \\
+                3 & 1 & 4 \\
+                12 & 4 & 16
+        \end{bmatrix} \\
+        & [P_{U^{\bot}}]_\xi = I - [P_U]_\xi = \frac{1}{26}(\begin{bmatrix}
+            26 & 0 & 0 \\
+            0 & 26 & 0 \\
+            0 & 0 & 26 
+    \end{bmatrix} - \begin{bmatrix}
+        9 & 3 & 12 \\
+        3 & 1 & 4 \\
+        12 & 4 & 16
+        \end{bmatrix}) = \frac{1}{26} \begin{bmatrix}
+            17 & -3 & -12 \\
+            -3 & 25 & -4 \\
+            -12 & -4 & 10 
+    \end{bmatrix}
+    \end{split}
+\end{equation*}
+
+\subsubsection*{(b)}
+It is easy to find out that we need to find $\langle \begin {bmatrix}
+    3 \\ 2 \\ 1
+\end{bmatrix}\rangle ^ {\bot}$. 
+\begin{equation*}
+    \begin{split}
+        &A = \begin{bmatrix}
+            3 \\
+            2 \\
+            1 
+        \end{bmatrix}\\
+        &[P_U]_\xi = A(A^*A)^{-1}A^* = \begin{bmatrix}
+            3 \\
+            2 \\
+            1  
+        \end{bmatrix} (\begin{bmatrix}
+            3 & 2 & 1 
+        \end{bmatrix} \begin{bmatrix}
+            3 \\
+            2 \\
+            1 
+        \end{bmatrix})^{-1} \begin{bmatrix}
+            3 & 2 & 1 
+        \end{bmatrix} = \frac{1}{14}\begin{bmatrix}
+                9 & 6 & 3 \\
+                6 & 4 & 2 \\
+                3 & 2 & 1
+        \end{bmatrix} \\
+        & [P_{U^{\bot}}]_\xi = I - [P_U]_\xi = \frac{1}{14}(\begin{bmatrix}
+            14 & 0 & 0 \\
+            0 & 14 & 0 \\
+            0 & 0 & 14 
+    \end{bmatrix} - \begin{bmatrix}
+        9 & 6 & 3 \\
+        6 & 4 & 2 \\
+        3 & 2 & 1
+        \end{bmatrix}) = \frac{1}{14} \begin{bmatrix}
+            5 & -6 & -3 \\
+            -6 & 10 & -2 \\
+            -3 & -2 & 13
+    \end{bmatrix}
+    \end{split}
+\end{equation*}
+
+\subsubsection*{(c)}
+It is easy to find out that we need to find $\langle \begin {bmatrix}
+    1 \\ i \\ -i
+\end{bmatrix}\rangle ^ {\bot}$. 
+\begin{equation*}
+    \begin{split}
+        &A = \begin{bmatrix}
+            1 \\
+            i \\
+            -i 
+        \end{bmatrix}\\
+        &[P_U]_\xi = A(A^*A)^{-1}A^* = \begin{bmatrix}
+            1 \\
+            i \\
+            -i  
+        \end{bmatrix} (\begin{bmatrix}
+            1 & -i & i 
+        \end{bmatrix} \begin{bmatrix}
+            1 \\
+            i \\
+            -i 
+        \end{bmatrix})^{-1} \begin{bmatrix}
+            1 & -i & i 
+        \end{bmatrix} = \frac{1}{3}\begin{bmatrix}
+                1 & -i & i \\
+                i & 1 & -1 \\
+                -i & -1 & 1
+        \end{bmatrix} \\
+        & [P_{U^{\bot}}]_\xi = I - [P_U]_\xi = \frac{1}{3}(\begin{bmatrix}
+            3 & 0 & 0 \\
+            0 & 3 & 0 \\
+            0 & 0 & 3 
+    \end{bmatrix} - \begin{bmatrix}
+        1 & -i & i \\
+        i & 1 & -1 \\
+        -i & -1 & 1
+        \end{bmatrix}) = \frac{1}{3}\begin{bmatrix}
+            2 & i & -i \\
+            -i & 2 & 1 \\
+            i & 1 & 2
+    \end{bmatrix}
+    \end{split}
+\end{equation*}
+
+\subsubsection*{(d)}
+Do REF to the given matrix, we get $\begin{bmatrix}
+    1 & 0 & 2 \\
+    0 & 1 & -1 \\
+    0 & 0 & 0 \\
+    0 & 0 & 0 
+\end{bmatrix}$. Which means that we only get first and second cols as basis.
+\begin{equation*}
+    \begin{split}
+        &A = \begin{bmatrix}
+            1 & 0 \\
+            -1 & 3 \\
+            0 & 2 \\
+            2 & 1
+        \end{bmatrix}\\
+        &[P_U]_\xi = A(A^*A)^{-1}A^* = \begin{bmatrix}
+            1 & 0 \\
+            -1 & 3 \\
+            0 & 2 \\
+            2 & 1
+        \end{bmatrix} (\begin{bmatrix}
+            1 & -1 & 0 & 2 \\
+            0 & 3 & 2 & 1 
+        \end{bmatrix} \begin{bmatrix}
+            1 & 0 \\
+            -1 & 3 \\
+            0 & 2 \\
+            2 & 1
+        \end{bmatrix})^{-1} \begin{bmatrix}
+            1 & -1 & 0 & 2 \\
+            0 & 3 & 2 & 1  
+        \end{bmatrix} = \frac{1}{83}\begin{bmatrix}
+                14 & -11 & 2 & 29 \\
+                -11 & 62 & 34 & -5 \\
+                2 & 34 & 24 & 16 \\
+                29 & -5 & 16 & 66
+        \end{bmatrix} 
+    \end{split}
+\end{equation*}
+
+\subsection*{4.3.14}
+\subsubsection*{(a)}
+\begin{proof}
+    Refer to \textbf{Theorem 1.10}
+    Define $0$ is zero matrix in $\mathbb{V, W}$. 
+
+
+
+
+\end{proof}
+
+
+
 
 
 
 \end{document}
-% \begin{equation*}
-%     \begin{split}
-%         & (\lfloor \frac{t}{d_3} \rfloor - 2p) + f((t \mod d_3) + 2 d_3 p, 2) \\
-%         \rightarrow & (\lfloor \frac{t}{d_3} \rfloor - 2p) 
-%         + \lfloor \frac{(t \mod d_3) + 2 d_3 p}{d_2} \rfloor 
-%         + f(((t \mod d_3) + 2 d_3 p) \mod d_2, 1) \\
-%         = & (\lfloor \frac{t}{25} \rfloor - 2p) 
-%         + \lfloor \frac{(t \mod 25) + 2 \cdot 25 \cdot p}{10} \rfloor 
-%         + f(((t \mod 25) + 2 \cdot 25 \cdot p) \mod 10, 1) \\
-%         = & (\lfloor \frac{t}{25} \rfloor - 2p) 
-%         + \lfloor \frac{t \mod 25}{10} \rfloor + 5 p 
-%         + f((t \mod 25) \mod 10, 1) \\
-%         = & \lfloor \frac{t}{25} \rfloor
-%         + \lfloor \frac{t \mod 25}{10} \rfloor + 3 p 
-%         + f((t \mod 25) \mod 10, 1) 
-%     \end{split}
-%     \end{equation*}
-
-% \begin{equation}
-%     \begin{split}
-%     (a + b)^4
-%       &= (a + b)^2 (a + b)^2     \\
-%       &= (a^2 + 2ab + b^2)
-%         (a^2 + 2ab + b^2)       \\
-%       &= a^4 + 4a^3b + 6a^2b^2 + 4ab^3 + b^4
-%     \end{split}
-%    \end{equation}
