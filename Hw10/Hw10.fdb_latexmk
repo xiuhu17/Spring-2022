@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1648577389 "/Users/wangzhihao/Desktop/Math416/Hw10/Hw10.tex" "/Users/wangzhihao/Desktop/Math416/Hw10/Hw10.pdf" "Hw10" 1648577390
-  "/Users/wangzhihao/Desktop/Math416/Hw10/Hw10.aux" 1648577389 868 8f5a0b9e452615735d9674676b1e1f18 ""
-  "/Users/wangzhihao/Desktop/Math416/Hw10/Hw10.tex" 1648577388 13215 44a2e353ee85edfcb9ee9aeaeae53dad ""
+["pdflatex"] 1648957259 "/Users/wangzhihao/Desktop/Math416/Hw10/Hw10.tex" "/Users/wangzhihao/Desktop/Math416/Hw10/Hw10.pdf" "Hw10" 1648957261
+  "/Users/wangzhihao/Desktop/Math416/Hw10/Hw10.aux" 1648957260 868 8f5a0b9e452615735d9674676b1e1f18 ""
+  "/Users/wangzhihao/Desktop/Math416/Hw10/Hw10.tex" 1648957259 14918 46aad0167d9daf6b5a0ffb73f1347361 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -65,12 +65,12 @@
   "/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1616695603 5169178 a2ce6e2d73f603b690db6777d06dbccb ""
   "/usr/local/texlive/2021/texmf-var/web2c/pdftex/pdflatex.fmt" 1647215156 2724734 dcb71411e321ef090b1790d4a971c521 ""
   "/usr/local/texlive/2021/texmf.cnf" 1616695596 577 4c1911a7228e554c6032256d3cf5567d ""
-  "Hw10.aux" 1648577389 868 8f5a0b9e452615735d9674676b1e1f18 "pdflatex"
-  "Hw10.tex" 1648577388 13215 44a2e353ee85edfcb9ee9aeaeae53dad ""
+  "Hw10.aux" 1648957260 868 8f5a0b9e452615735d9674676b1e1f18 "pdflatex"
+  "Hw10.tex" 1648957259 14918 46aad0167d9daf6b5a0ffb73f1347361 ""
   (generated)
-  "Hw10.aux"
-  "/Users/wangzhihao/Desktop/Math416/Hw10/Hw10.log"
   "/Users/wangzhihao/Desktop/Math416/Hw10/Hw10.pdf"
+  "Hw10.thm"
   "Hw10.pdf"
   "Hw10.log"
-  "Hw10.thm"
+  "Hw10.aux"
+  "/Users/wangzhihao/Desktop/Math416/Hw10/Hw10.log"
