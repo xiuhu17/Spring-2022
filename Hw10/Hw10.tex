@@ -584,13 +584,100 @@ Do REF to the given matrix, we get $\begin{bmatrix}
 \subsubsection*{(a)}
 \begin{proof}
     Refer to \textbf{Theorem 1.10}
-    Define $0$ is zero matrix in $\mathbb{V, W}$. 
-
-
-
-
+    Define $0$ is zero matrix in $\mathbb{V, W}$. $\forall v, v_1, v_2, w , w_1, w_2\in \mathbb{V, W}$, $c \in \mathbb{F}$we have
+    \begin{equation*}
+        \begin{split}
+            &0 + v = v, 0^T = 0 \Rightarrow 0 \in \mathbb{V}\\
+            &0 + w = w, 0^T = -0 \Rightarrow 0 \in \mathbb{W} \\
+            & v_1 + cv_2 = (v_1 + cv_2)^T \Rightarrow v_1 + cv_2 \in \mathbb{V} \\
+            & w_1 + cw_2 = (-w_1 - cw_2)^T = -(w_1 + cw_2)^T\Rightarrow w_1 + cw_2 \in \mathbb{W} 
+        \end{split}
+    \end{equation*}
+    So $\mathbb{V, W}$ is subspace of $M_n(\mathbb{R})$.
 \end{proof}
 
+\subsubsection*{(b)}
+\noindent   Refer to \textbf{Frobenius Inner Product}: $ \forall X, Y \in M_n(\mathbb{R}), X^T = X^*, \langle X, Y \rangle = tr(XY^*) = tr(XY^T)$, since the field we are using here is $\mathbb{R}$.
+    \begin{claim}
+        Rewrite V as $V = \{ \frac {X + X ^ T} {2} | X \in M_n(\mathbb{R}) \}$, W as $W = \{ \frac {X - X ^ T} {2} | X \in M_n(\mathbb{R}) \}$.
+        $(\frac {X + X ^ T} {2})^T = \frac {X^T + X} {2} = \frac {X + X^T} {2}$, and $(\frac {X - X ^ T} {2})^T = \frac {X^T - X} {2} = - \frac {X - X^T} {2}$
+    \end{claim}
+    By the \textbf{Definition Of Orthogonal Projection}, I can build a function $P_V: M_n(\mathbb{R}) \rightarrow M_n(\mathbb{R})$ 
+    and $X = \frac {X + X ^ T} {2} + \frac {X - X ^ T} {2}, X \in M_n(\mathbb{R}), \frac{X + X ^ T} {2} \in \mathbb{V}, \frac {X - X ^ T} {2} \in \mathbb{W}, P_V(X) = 
+    \frac {X + X ^ T} {2}$.
+\begin{proof}
+    By the \textbf{Proposition 3.60}
+    $\forall v \in \mathbb{V}, \forall w \in \mathbb{W}$, $tr(vw^T) = -tr(vw) = -tr(v^Tw) = - tr(wv^T) = - tr(wv^T)^T = - tr(vw^T) \Rightarrow tr(vw^T) = 0$.
+    Therfore the function I build is valid. $\mathbb{V^\bot} = \mathbb{W}$.
+\end{proof}
+ 
+\subsubsection*{(c)}
+
+\noindent Refer to the conclusion from \textbf{(b)}: $P_V(X) = \frac {X + X ^ T} {2} = \frac {X + X ^ *} {2} = Re(A)$,  
+$P_W(X) (= P_{V^\bot}(X) = I(X) - P_V(X)) = \frac {X - X ^ T} {2} = \frac {X - X ^ *} {2} = i \frac {X - X ^ *} {2i} = iIm(A)$
+
+\subsection*{4.3.22}
+\subsubsection*{(a)}
+\begin{proof}
+    $\forall i \in \{1, 2, ..., n \}$, the $ith$ col of $[P_U]_B$ is $\begin{bmatrix}
+        \langle P_U(e_i), e_1 \rangle \\ \langle P_U(e_i), e_2 \rangle \\ ... \\ \langle P_U(e_i), e_n \rangle
+    \end{bmatrix}$. \\
+    When $i \le m$, $\begin{bmatrix}
+        \langle P_U(e_i), e_1 \rangle \\ \langle P_U(e_i), e_2 \rangle \\ ... \\ \langle P_U(e_i), e_n \rangle
+    \end{bmatrix} = \begin{bmatrix}
+        \langle \sum_{k = 1}^{k = m} \langle e_i,e_k \rangle e_k  , e_1 \rangle \\ \langle \sum_{k = 1}^{k = m} \langle e_i,e_k \rangle e_k  , e_2 \rangle \\ ... \\ \langle \sum_{k = 1}^{k = m} \langle e_i,e_k \rangle e_k  , e_n \rangle
+    \end{bmatrix} = \begin{bmatrix}
+        \langle e_i, e_1 \rangle \\ \langle e_i, e_2 \rangle \\ ... \\ \langle e_i, e_n \rangle
+    \end{bmatrix}= \begin{bmatrix}
+        0 \\ 0 \\ ... \\1 \\ ...\\ 0
+    \end{bmatrix}$. \\ The $ith$ row will be one which is $[[P_U]_B]_{ii} = 1$. \\
+    When $i > m$, $\begin{bmatrix}
+        \langle P_U(e_i), e_1 \rangle \\ \langle P_U(e_i), e_2 \rangle \\ ... \\ \langle P_U(e_i), e_n \rangle
+    \end{bmatrix} = \begin{bmatrix}
+        \langle \sum_{k = 1}^{k = m} \langle e_i,e_k \rangle e_k  , e_1 \rangle \\ \langle \sum_{k = 1}^{k = m} \langle e_i,e_k \rangle e_k  , e_2 \rangle \\ ... \\ \langle \sum_{k = 1}^{k = m} \langle e_i,e_k \rangle e_k  , e_n \rangle
+    \end{bmatrix} = \begin{bmatrix}
+        \langle 0, e_1 \rangle \\ \langle 0, e_2 \rangle \\ ... \\ \langle 0, e_n \rangle
+    \end{bmatrix} = \begin{bmatrix}
+        0 \\ 0 \\ ... \\0 \\ ...\\ 0
+    \end{bmatrix}$. \\
+    $\Rightarrow [P_U]_B = diag(1, ... 1, 0, ..., 0)$.
+\end{proof}
+
+\subsubsection*{(b)}
+\begin{proof}
+    Refer to the \textbf{Definition Of Orthogonal Projection}: $\forall u \in rangeP_U, u \in U \\ \Rightarrow RangeP_U \subset U$.\\
+    By the conclusion of \textbf{part2}, we know $ \forall u \in U, u = \sum _{j = 1}^{j = m} a_je_j, P_U(u) = \sum _{i = 1}^{i = m} \langle u, e_i \rangle e_i = 
+    \sum _{i = 1}^{i = m} \langle \sum_{j = 1}^{j = m} a_je_j, e_i \rangle e_i  = \sum _{i = 1}^{i = m} \sum_{j = 1}^{j = m} a_j \langle e_j, e_i \rangle e_i
+    = \sum _{i = 1}^{i = m} a_ie_i = u \Rightarrow \forall u \in U, P_U(u) = u$. I can conclude that $\forall u \in U, \exists u \in U \subset V, u = P_U(u) \in
+    RangeP_U \Rightarrow U \subset RangeP_U$.\\
+    $ \Rightarrow U = RangeP_U$
+\end{proof}
+
+\subsubsection*{(c)}
+\begin{proof}
+    Refer to \textbf{Definition Of Orthogonal Projection}: $\forall v \in V, u \in U, w \in U^\bot, v = u + w, P_U(v) = u$. \\
+    $\forall v \in KerP_U, P_U(v) = 0 \Rightarrow v = 0 + v \Rightarrow v \in U^\bot \Rightarrow KerP_U \subset U^\bot$ \\
+    $\forall v \in U^\bot \subset V, v = 0 +v \Rightarrow P_U(v) = 0 \Rightarrow v \in KerU^\bot \Rightarrow U^\bot \subset KerP_U$ \\
+    $\Rightarrow U^\bot = KerP_U$
+\end{proof}
+
+\subsubsection*{(d)}
+\begin{proof}
+    Suppose $\forall v \in V, v = u + w, u \in U, w \in U^\bot$
+    \begin{equation*}
+        (I - P_U)v = v - P_U(v) = v - u = w = P_{U^\bot}(v) \Rightarrow I - P_U = P_{U^\bot}
+    \end{equation*}
+\end{proof}
+
+\subsubsection*{(e)}
+\begin{proof}
+    Refer to the conclusion from \textbf{(b)}
+    \begin{equation*}
+        \begin{split}
+            \forall v \in V, u \in U, w \in U^{\bot}, v = u + w, P^2_U(v) = P_U(u) = u = P_U(v) \Rightarrow P^2_U = P_U
+        \end{split}
+    \end{equation*}
+\end{proof}
 
 
 
