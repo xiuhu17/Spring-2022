@@ -286,12 +286,15 @@ Refer to \textbf{Exercise 4.1.4}
     Because we are using $\mathbb{R}$ for this question, so $|\langle v, w\rangle|^2 = \langle v, w\rangle * \overline {\langle v, w\rangle} = \langle v, w\rangle^2$. \\
     Use the \textbf{Theorem 4.10}, and according to the example on \textbf{Page 240}:
     \begin{denote}
-        The othonomal basis of triangonometric polynomial space is $ B_v = \{ \frac {1} {\sqrt {2 \pi}}, \frac{1}{\sqrt{\pi}} sin(ix), \frac{1}{\sqrt{\pi}} cos(jx) | i = 1, ... n \in \mathbb{N}, j = 1, ... m \in \mathbb{N} \}$. 
+        The othonomal basis of triangonometric polynomial space is $ B_v = \{ \frac {1} {\sqrt {2 \pi}}, \frac{1}{\sqrt{\pi}} sin(kx), \frac{1}{\sqrt{\pi}} cos(lx) | k = 1, ... n \in \mathbb{N}, l = 1, ... m \in \mathbb{N} \}$. 
         The $ith$ entry of $[f]_{B_v}$, which is under the triangonometric polynomial space is $t_i = \langle f, e_i\rangle$. 
     \end{denote}
+    Since the element of the function is constitute by the orthonoml basis. So when any part of the function, $b_0, a_ksin(k\theta), b_lcos(l\theta)$, we can tret them as constant times of one of the orthonomal basis.
     \begin{equation*}
         \begin{split}
-            \|f\|^ 2 & = \sum_{i=1}^{i=1+m+n} | \langle v, e_i\rangle|^2 = \sum_{i=1}^{i=1+m+n}  \langle v, e_i\rangle ^2 = \sum_{i=1}^{i=1+m+n} t_i ^2 \\
+            \|f\|^ 2 & = \sum_{i=1}^{i=1+m+n} | \langle f, e_i\rangle|^2 = \sum_{i=1}^{i=1+m+n}  \langle f, e_i\rangle ^2 = \sum_{i=1}^{i=1+m+n} t_i ^2 \\
+            & = \sum_{i=1}^{i=1+m+n} (| \langle \sum_{k=1}^{k=n}a_ksin(k \theta) , e_i\rangle |^2 + | \langle \sum_{l=1}^{l=m}b_lcos(l \theta) , e_i\rangle |^2  + | \langle b_0, e_i \rangle|^2)\\
+            & = \sum_{i=1}^{i=1+m+n} (| \langle \sqrt{\pi} \sum_{k=1}^{k=n} \frac{1}{\sqrt{\pi}}a_ksin(k \theta) , e_i\rangle |^2 + | \langle \sqrt{\pi} \sum_{l=1}^{l=m} \frac{1}{\sqrt{\pi}}b_lcos(l \theta) , e_i\rangle |^2  + | \sqrt{2\pi} b_0 \langle \frac{1}{\sqrt{2\pi}}, e_i \rangle|^2)\\
             & = {b_0 ^ 2}{2 \pi} + \sum_{k=1}^{k=n} {a_k ^2 }{\pi} + \sum_{l=1}^{l=m} {b_l ^2 }{\pi} \\
             & \Rightarrow \|f\| = \sqrt{{b_0^2}{{2 \pi}} + \sum_{k=1}^{k=n}  {a_k ^2 }{\pi} + \sum_{l=1}^{l=m}{b_l ^2 }{\pi}}
         \end{split}
@@ -403,7 +406,7 @@ Refer to \textbf{Proposition 4.18}
             0 & 1 & -i 
         \end{bmatrix} = \frac{1}{3}\begin{bmatrix}
             2 & -i & 1  \\
-            -i & 2 & -i  \\
+            i & 2 & -i  \\
             1 & i & 2 
         \end{bmatrix}
     \end{split}
