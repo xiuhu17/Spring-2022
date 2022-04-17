@@ -62,21 +62,110 @@
 \geometry{a4paper}
 \title{Homework11}
 \author{Zhihao Wang} 
-\date{04/15/2022}
+\date{04/22/2022}
 \begin{document}
 \maketitle 
 
-\subsection*{4.3.6}
+\subsection*{4.5.4}
 \subsubsection*{(a)}
-Refer to \textbf{Theorem 4.19}, $x \in \mathbb{R^4}, u \in U \subset \mathbb{R^4}, u = P_U(x)$ when we get the closet distance.
+\begin{denote}
+    The $ \left(\begin{bmatrix}
+        1 \\ 0
+    \end{bmatrix}, \begin{bmatrix}
+        1 \\ 1
+    \end{bmatrix} \right) $ as $B_v$
+\end{denote}
+The $ith$ column of $[R]_{B_v}$ is $[Rv_i]_{B_v}$.
 \begin{equation*}
     \begin{split}
-       
-
-    \end{split}
+        &[Rv_1]_{B_v} = \begin{bmatrix}
+            1 \\ 0
+        \end{bmatrix}_{B_v} = \begin{bmatrix}
+            1 \\ 0
+        \end{bmatrix} \\
+        &[Rv_2]_{B_v} = \begin{bmatrix}
+            1 \\ -1
+        \end{bmatrix}_{B_v} = \begin{bmatrix}
+            2 \\ -1
+        \end{bmatrix} \\
+        \Rightarrow & \begin{bmatrix}
+            1 & 2 \\ 0 & -1
+        \end{bmatrix}
+    \end{split} 
 \end{equation*}
 
+\subsubsection*{(b)}
+\begin{proof}
+    By \textbf{Proposition 4.31} and \textbf{Definition of Orthogonal Matrix}, we know that if the columns are not \textbf{Othonomal}, then the matrix must
+    not be orthogonal.
+    \begin{equation*}
+        \begin{split}
+            \langle A_1, A_2 \rangle = 2 \neq 0
+        \end{split}
+    \end{equation*}
+    Therefore, $A$ is not orthogonal matrix.
+\end{proof}
 
+
+\subsubsection*{(c)}
+\begin{proof}
+    Because \textbf{Proposition 4.30} says, \textbf{Suppose} $B_v, B_w$ \textbf{are orthonormal basis of} $\mathbb{V, W}$. But $ \left(\begin{bmatrix}
+        1 \\ 0
+    \end{bmatrix}, \begin{bmatrix}
+        1 \\ 1
+    \end{bmatrix} \right) $ itself is not an orthonomal basis.
+\end{proof}
+
+\subsection*{4.5.6}
+\begin{proof}
+    Since $\mathbb{C}_{2 \pi}(\mathbb{R})$ is equipped with innerporduct, so it is both an innerproduct space and a normed space. \\
+    Suppose $\forall f(x) \in \mathbb{C}_{2 \pi}(\mathbb{R})$, which means $f(x)$ is a continuous $2 \pi$ periodic function $\Rightarrow$
+    $\exists g(x) = f(x - t) \in \mathbb{C}_{2 \pi}(\mathbb{R}), T(g)(x) = f(x + t)$. $T$ is a surjective lineaer map.
+    \begin{denote}
+        \begin{equation*}
+            \begin{split}
+                & \int_{a}^{b} f(x) \overline{f(x)} \,d(x) = F(b) - F(a) = \int_{a + 2 \pi}^{b + 2 \pi} f(x) \overline{f(x)} \,d(x) = F(b + 2 \pi ) - F(a+ 2 \pi) \\
+                \Rightarrow & F(b + 2 \pi) - F(b) =  F(a + 2 \pi) - F(a)
+            \end{split}
+        \end{equation*}
+    \end{denote}
+
+    \textbf{So we get}
+    \begin{equation*}
+        \begin{split}
+            \|(Tf)(x)\|   \int_{0}^{2 \pi} (Tf)(x) \overline{(Tf)(x)} \,dx & = \int_{0}^{2 \pi} f(x+t) \overline{f(x+t)} \,dx \\
+                        & = \int_{0}^{2 \pi} f(x+t) \overline{f(x+t)} \,d(x + t) \\
+                        & = \int_{t}^{t + 2 \pi} f(x') \overline{f(x')} \,d(x') \\
+                        & = F(t + 2 \pi) - F(t) \\
+                        & = F(0 + 2 \pi) - F(0) \\
+                        & = \|(f)(x)\|
+        \end{split}
+    \end{equation*}
+    So, it is an isometry.
+\end{proof}
+
+\subsection*{4.5.8}
+\subsection*{4.5.10}
+\subsection*{4.5.14}
+\subsubsection*{(a)}
+\begin{proof}
+    By \textbf{Proposition 4.30}, we know that if $U$ is unitary, then all columns of $U$ is orthonomal. By \textbf{Theorem 4.3}, we know that all columns are independent. 
+    By \textbf{Theorem 3.28}, we know that the columns are orthonomal basis. By \textbf{Corrolary 4.30}, we Know that $U$ is an isometry.
+    \begin{equation*}
+        \begin{split}
+            \|U\|_{op} = \mathop{max} \limits _ {\|v\| = 1, v \in \mathbb{C}^n} \|Uv\| = \|v\| = 1
+        \end{split}
+    \end{equation*}
+\end{proof}
+
+\subsubsection*{(b)}
+By \textbf{Proposition 4.30}, we know that if $U$ is unitary, then all columns of $U$ is orthonomal. By \textbf{Theorem 4.3}, we know that all columns are independent. 
+By \textbf{Theorem 3.28}, we know that the columns are orthonomal basis. By \textbf{Corrolary 4.30}, we Know that $U$ is an isometry.
+\begin{equation*}
+    \begin{split}
+        \|U\|_F = \sqrt{trU^*U }= \sqrt{trI} = \sqrt{n}
+    \end{split}
+\end{equation*}
 
 
 
