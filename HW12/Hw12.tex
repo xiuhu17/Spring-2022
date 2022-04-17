@@ -144,8 +144,8 @@ The $ith$ column of $[R]_{B_v}$ is $[Rv_i]_{B_v}$.
     So, it is an isometry.
 \end{proof}
 
-\subsection*{4.5.8}
-\subsection*{4.5.10}
+\subsection*{4.5.8}  %%%%%%%%%%%%%%%%
+\subsection*{4.5.10} %%%%%%%%%%%%%%%%
 \subsection*{4.5.14}
 \subsubsection*{(a)}
 \begin{proof}
@@ -166,6 +166,104 @@ By \textbf{Theorem 3.28}, we know that the columns are orthonomal basis. By \tex
         \|U\|_F = \sqrt{trU^*U }= \sqrt{trI} = \sqrt{n}
     \end{split}
 \end{equation*}
+
+\subsection*{5.1.4}
+\begin{denote}
+    $e_1 = \begin{bmatrix}
+        1 \\ 0 \\ 0
+    \end{bmatrix}$
+    $e_2 = \begin{bmatrix}
+        0 \\ 1 \\ 0
+    \end{bmatrix}$
+    $e_3 = \begin{bmatrix}
+        0 \\ 0 \\ 1
+    \end{bmatrix}$
+\end{denote}
+First use standard basis as $(e_1, e_2, e_3)$. Second use $(e_2, e_3)$ as basis for output. \\
+\begin{equation*}
+    \begin{split}
+        &T(e_1) = \begin{bmatrix}
+            0 \\  1 \\ 0
+        \end{bmatrix} = 1 * e_2\\
+        &T(e_3) = \begin{bmatrix}
+            0 \\  0 \\ 1
+        \end{bmatrix} = 1 * e_3 \\
+        &T(e_2) = \begin{bmatrix}
+            0 \\  0 \\ 0
+        \end{bmatrix} = 0 * e_2 
+    \end{split}
+\end{equation*}
+Since $rank T = 2$, so the $\sigma_1 = 1, \sigma_2 = 1$ \\
+The right vectors are $(e_1, e_3, e_2)$, left vectors are $(e_2, e_3)$, and $\sigma_1 = 1, \sigma_2 = 1$.
+
+\subsection*{5.1.6}
+
+\begin{denote}
+    The standard basis of $\mathbb{V}$ is $(e_1, e_2, ..., e_n)$, with $dimV = n$. As well as $P := P_U$ with $U \subset V, dim U = m, U = span(e_1, ..., e_m)$, and $V = U \oplus  U^\bot$.
+\end{denote}
+\subsubsection*{(a)}
+
+By \textbf{Theorem 5.3}, we know that the singular value are unique. So we just need to prove that we can find only $1, 0$. \\
+By \textbf{Theorem 4.16.2}, when $i \le m$
+\begin{equation*}
+    \begin{split}
+        P_U(e_i) = \sum_{j = 1}^{j = m} \langle e_i, e_j \rangle e_j = \langle e_i, e_{j=i} \rangle e_{j = i} = 1 * e_i
+    \end{split}
+\end{equation*}
+By \textbf{Theorem 4.16.2}, when $i > m$
+\begin{equation*}
+    \begin{split}
+        P_U(e_i) = \sum_{j = 1}^{j = m} \langle e_i, e_j \rangle e_j = 0
+    \end{split}
+\end{equation*}
+So, the singular values are only $0, 1$. 
+
+\subsubsection*{(b)}
+I choose $(e_1, e_2, ..., e_n)$ as both left and right singular vectors, and with the same sequence.
+
+\subsection*{5.1.10}
+\begin{proof}
+    Since $T$ is invertible, so $n = dimV = dimW$. Since $\forall i \in \{1, 2, ..., n\}, \sigma_i > 0, \ne 0$. By \textbf{Theorem5.3}, we know the singular value is unique.
+    \begin{denote}
+        The orthonomal basis of $V$ is $(e_1, e_2, ..., e_n)$, and the orthonomal basis of $W$ is $(f_1, f_2, ..., f_n)$.
+    \end{denote}
+    \begin{consider}
+        Construct $T^{-1} \in \mathfrak{L}(W, V)$, with singular value $\sigma'_1, \sigma'_2, ..., \sigma'_n$
+    \end{consider}
+    Since $\forall i \in \{1, 2, ..., n\}$
+    \begin{equation*}
+        \begin{split}
+            T(e_i) = \sigma_if_i \Rightarrow T^{-1}(f_i) = \frac{1}{\sigma_i}e_i
+        \end{split}
+    \end{equation*}
+    $\forall i \ge j$
+    \begin{equation*}
+        \begin{split}
+            \sigma_i \ge \sigma_j \Rightarrow \frac{1}{\sigma_j} \ge \frac{1}{\sigma_i}
+        \end{split}
+    \end{equation*}
+    Therefore, $\{ \frac{1}{\sigma_n}, \frac{1}{\sigma_{n-1}}, ..., \frac{1}{\sigma_1} \}$ are singular value of $T^{-1}$. \\
+    By \textbf{{Key Ideas On Page295 last point}}, we know that the largest singular value is operator norm of that map.
+    \begin{equation*}
+        \begin{split}
+            \|T^{-1}\|_{op} = \frac{1}{\sigma_n} \Rightarrow \|T^{-1}\|^{-1}_{op} = \sigma_n
+        \end{split}
+    \end{equation*}
+    \begin{denote}
+        $v = \sum_{i = 1}^{i = n} a_ie_i $, $\|v\| = 1$
+    \end{denote}
+    \begin{equation*}
+        \begin{split}
+            \|T(v)\| & = \|T(\sum_{i = 1}^{i = n} a_ie_i)\| = \|\sum_{i = 1}^{i = n} a_iT(e_i)\| = \|\sum_{i = 1}^{i = n} a_i\sigma_if_i\| \\
+                & \ge \| \sigma_n\sum_{i = 1}^{i = n} a_if_i\| = |\sigma_n| \| \sum_{i = 1}^{i = n} a_if_i\| \\
+                & = |\sigma_n|\sqrt{\sum_{i = 1}^{i = n} \|a_if_i\|^2} = |\sigma_n|\sqrt{\sum_{i = 1}^{i = n} |a_i|^2\|f_i\|^2} \\
+                & = |\sigma_n|\sqrt{\sum_{i = 1}^{i = n} |a_i|^2} = |\sigma_n| \\
+                & \Rightarrow \mathop{min} \limits _ {\|v\| = 1}\|Tv\| = \sigma_n
+        \end{split}
+    \end{equation*}
+
+\end{proof}
+
 
 
 
