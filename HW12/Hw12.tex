@@ -272,13 +272,33 @@ I choose $(e_1, e_2, ..., e_n)$ as both left and right singular vectors, and wit
 \end{denote}
 \begin{equation*}
     \begin{split}
-        \|Tv\| &= \|T(\sum_{i = j}^{i=p} a_ie_i + \sum_{i = p+1}^{i=n} a_ie_i)\| = \| \sum_{i = j}^{i=p} a_iT(e_i) + \sum_{i = p+1}^{i=n} a_iT(e_i)\| \\
+        \|Tv\| & = \|T(\sum_{i = j}^{i=p} a_ie_i + \sum_{i = p+1}^{i=n} a_ie_i)\| = \| \sum_{i = j}^{i=p} a_iT(e_i) + \sum_{i = p+1}^{i=n} a_iT(e_i)\| \\
             & = \| \sum_{i = j}^{i=p} a_i\sigma_if_i + \sum_{i = p+1}^{i=n} 0 \| = \| \sum_{i = j}^{i=p} a_i\sigma_if_i\| \\
-            & \le \sum_{i = j}^{i=p} \| a_i\sigma_if_i\| \le |\sigma_j| \sum_{i = j}^{i=p} \| a_if_i\| \\
-            & \le |\sigma_j| \sum_{i = 1}^{i=m} \| a_if_i\| = |\sigma_j| \sum_{i = 1}^{i=m} \| a_if_i\|
+            & = \sqrt{\sum_{i = j}^{i=p} \|a_i\sigma_if_i\|^2} \le \sqrt{|\sigma_j|^2\sum_{i = j}^{i=p} \|a_if_i\|^2} \\
+            & \le \sqrt{|\sigma_j|^2\sum_{i = j}^{i=n} \|a_if_i\|^2} = \sqrt{|\sigma_j|^2\sum_{i = j}^{i=n} \|a_i\|^2} \\ & = \sigma_j\|v\|
     \end{split} 
 \end{equation*}
 
+\subsubsection*{(b)}
+\begin{denote}
+    The orthonomal basis of $\mathbb{W}$ is $(f_1, f_2, ..., f_m)$, with $dim \mathbb{W} = m$
+\end{denote}
+\begin{equation*}
+    \begin{split}
+        \|Tv\| &= \|T(\sum_{i = 1}^{i=j} a_ie_i)\|  =  \|\sum_{i = 1}^{i=j} a_iT(e_i)\|\\
+        & = \|\sum_{i = 1}^{i=j} a_i \sigma_i f_i\| = \sqrt{\sum_{i = 1}^{i=j}\| a_i \sigma_i f_i\|^2} \\
+        & \ge  \sqrt{|\sigma_j|^2\sum_{i = 1}^{i=j}\| a_i  f_i\|^2} = \sqrt{|\sigma_j|^2\sum_{i = 1}^{i=j}\| a_i \|^2} \\
+        & = \sigma_j \| v\|
+    \end{split} 
+\end{equation*}
 
+\subsubsection*{(c)}
+We will try to prove this by using controlpositive statement. \textbf{If} $\forall v \in U$ \textbf{that}  $\|Tv\| \ge \sigma_j\| v\|$, \textbf{then} $U \in V, dimU = n - j + 1$. \\
+\begin{equation*}
+\begin{split}
+     &\sigma_j \| v\| = \sqrt{|\sigma_j|^2\sum_{i = 1}^{i=n}\| a_i \|^2} \le \|Tv\| = \| \sum_{i = 1}^{i=n}a_iT(v_i)\| = \| \sum_{i = 1}^{i=p}a_i\sigma_if_i\| \\
+     &\Rightarrow |\sigma_j|^2\sum_{i = 1}^{i=n}\| a_i \|^2 \le \sum_{i = 1}^{i=p} \| \sigma_ia_i \|^2
+\end{split}   
+\end{equation*}
 
 \end{document}
