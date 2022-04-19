@@ -293,12 +293,57 @@ I choose $(e_1, e_2, ..., e_n)$ as both left and right singular vectors, and wit
 \end{equation*}
 
 \subsubsection*{(c)}
-We will try to prove this by using controlpositive statement. \textbf{If} $\forall v \in U$ \textbf{that}  $\|Tv\| \ge \sigma_j\| v\|$, \textbf{then} $U \in V, dimU = n - j + 1$. \\
-\begin{equation*}
-\begin{split}
-     &\sigma_j \| v\| = \sqrt{|\sigma_j|^2\sum_{i = 1}^{i=n}\| a_i \|^2} \le \|Tv\| = \| \sum_{i = 1}^{i=n}a_iT(v_i)\| = \| \sum_{i = 1}^{i=p}a_i\sigma_if_i\| \\
-     &\Rightarrow |\sigma_j|^2\sum_{i = 1}^{i=n}\| a_i \|^2 \le \sum_{i = 1}^{i=p} \| \sigma_ia_i \|^2
-\end{split}   
+First I could build a vector space $V = \langle e_1, e_2, ..., e_j\rangle, dimV = j$. By \textbf{Lemma 3.22}, \begin{equation*}
+    \begin{split}
+        dimU + dimV = n - j + 1 + j \ge n \Rightarrow U \cap V \ne {0}
+    \end{split}
 \end{equation*}
+By conclusion from \textbf{Part (b)}
+\begin{equation*}
+    \begin{split}
+        \exists v_0 \in U, v_0 \in V, \|Tv_0\| \ge \sigma_j v_0
+    \end{split}
+\end{equation*}
+
+\subsubsection*{(d)}
+Use the conclusion from \textbf{Part (c)}, we know that, if $dimU = n - j + 1 \Rightarrow \exists v_0 \in U, \|Tv\| \ge \sigma_j\|v_0\|$
+ This is equivalent to \begin{equation*}
+     \begin{split}
+         dimU = n - j + 1 \Rightarrow \mathop{max} \limits _{v \in U} \|Tv\| \ge \sigma_j\|v\|
+     \end{split}
+ \end{equation*}
+
+ When $\forall v \in U, \|v\| = 1$, we get
+ \begin{equation*}
+    \begin{split}
+        dimU = n - j + 1 \Rightarrow \mathop{max} \limits _{v \in U, \|v\| = 1} \|Tv\| \ge \sigma_j
+    \end{split}
+\end{equation*}
+
+Since it is true $\forall U \subset V, dimU = n - j + 1$, the statement is equivalent to \begin{equation}
+    \begin{split}
+        \mathop{min} \limits_{dimU = n - j + 1} \mathop{max} \limits _{v \in U, \|v\| = 1} \|Tv\| \ge \sigma_j
+    \end{split}
+\end{equation}
+
+Now we need to prove another side. Now we build $U' = \langle e_j, e_{j+1}, ..., e_n \rangle, dimU' = n - j + 1$. From conclusion from \textbf{Part (a)}, we get
+\begin{equation}
+    \begin{split}
+        \mathop{max} \limits _{v \in U', \|v\| = 1} \|Tv\| \le \sigma_j
+    \end{split}
+\end{equation}
+
+From \textbf{Equation (1), and (2)}, we get 
+\begin{equation}
+    \begin{split}
+        \mathop{min} \limits_{dimU = n - j + 1} \mathop{max} \limits _{v \in U, \|v\| = 1} \|Tv\| \le \mathop{max} \limits _{v \in U', \|v\| = 1} \|Tv\| \le \sigma_j
+    \end{split}
+\end{equation}
+
+From \textbf{Eqution (1), and (3)}, I prove \begin{equation*}
+    \begin{split}
+        \mathop{min} \limits_{dimU = n - j + 1} \mathop{max} \limits _{v \in U, \|v\| = 1} \|Tv\| = \sigma_j
+    \end{split}
+\end{equation*} 
 
 \end{document}
