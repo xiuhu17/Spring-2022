@@ -223,7 +223,8 @@ I choose $(e_1, e_2, ..., e_n)$ as both left and right singular vectors, and wit
 
 \subsection*{5.1.10}
 \begin{proof}
-    Since $T$ is invertible, so $n = dimV = dimW$. Since $\forall i \in \{1, 2, ..., n\}, \sigma_i > 0, \ne 0$. By \textbf{Theorem5.3}, we know the singular value is unique.
+    Since $T$ is invertible, it must be surjective, so $n = rangeT = dimW = dimV$. Since $\forall i \in \{1, 2, ..., n\}, \sigma_i > 0, \ne 0$. By \textbf{Theorem5.3}, we know the singular value is unique.
+    
     \begin{denote}
         The orthonomal basis of $V$ is $(e_1, e_2, ..., e_n)$, and the orthonomal basis of $W$ is $(f_1, f_2, ..., f_n)$.
     \end{denote}
@@ -255,8 +256,8 @@ I choose $(e_1, e_2, ..., e_n)$ as both left and right singular vectors, and wit
     \begin{equation*}
         \begin{split}
             \|T(v)\| & = \|T(\sum_{i = 1}^{i = n} a_ie_i)\| = \|\sum_{i = 1}^{i = n} a_iT(e_i)\| = \|\sum_{i = 1}^{i = n} a_i\sigma_if_i\| \\
-                & \ge \| \sigma_n\sum_{i = 1}^{i = n} a_if_i\| = |\sigma_n| \| \sum_{i = 1}^{i = n} a_if_i\| \\
-                & = |\sigma_n|\sqrt{\sum_{i = 1}^{i = n} \|a_if_i\|^2} = |\sigma_n|\sqrt{\sum_{i = 1}^{i = n} |a_i|^2\|f_i\|^2} \\
+                & = \sqrt{\sum_{i = 1}^{i = n} |\sigma_i|^2\|a_if_i\|^2} \\
+                & \ge |\sigma_n|\sqrt{\sum_{i = 1}^{i = n} |a_i|^2\|f_i\|^2} \\
                 & = |\sigma_n|\sqrt{\sum_{i = 1}^{i = n} |a_i|^2} = |\sigma_n| \\
                 & \Rightarrow \mathop{min} \limits _ {\|v\| = 1}\|Tv\| = \sigma_n
         \end{split}
@@ -264,6 +265,19 @@ I choose $(e_1, e_2, ..., e_n)$ as both left and right singular vectors, and wit
 
 \end{proof}
 
+\subsection*{5.1.14}
+\subsubsection*{(a)}
+\begin{denote}
+    The orthonomal basis of $\mathbb{W}$ is $(f_1, f_2, ..., f_m)$, with $dim \mathbb{W} = m$
+\end{denote}
+\begin{equation*}
+    \begin{split}
+        \|Tv\| &= \|T(\sum_{i = j}^{i=p} a_ie_i + \sum_{i = p+1}^{i=n} a_ie_i)\| = \| \sum_{i = j}^{i=p} a_iT(e_i) + \sum_{i = p+1}^{i=n} a_iT(e_i)\| \\
+            & = \| \sum_{i = j}^{i=p} a_i\sigma_if_i + \sum_{i = p+1}^{i=n} 0 \| = \| \sum_{i = j}^{i=p} a_i\sigma_if_i\| \\
+            & \le \sum_{i = j}^{i=p} \| a_i\sigma_if_i\| \le |\sigma_j| \sum_{i = j}^{i=p} \| a_if_i\| \\
+            & \le |\sigma_j| \sum_{i = 1}^{i=m} \| a_if_i\| = |\sigma_j| \sum_{i = 1}^{i=m} \| a_if_i\|
+    \end{split} 
+\end{equation*}
 
 
 
