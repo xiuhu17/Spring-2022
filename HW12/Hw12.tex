@@ -454,11 +454,87 @@ Since it is a diagonal matrix, so the eignvalue of $A^*A$ is its diagonal. Singu
 The singular value of $A$ is $|\lambda_1|, |\lambda_2|, |\lambda_3|, ..., |\lambda_n|$
 
 
-
 \subsection*{5.2.16}
+\subsubsection*{(a)}
+\begin{equation*}
+    \begin{split}
+        AA^\dagger b = b \Rightarrow \exists x, x= A^\dagger b, Ax = b
+    \end{split}
+\end{equation*}
+From the conclusion \textbf{5.2.15(d)}
+\begin{equation*}
+    \begin{split}
+        \exists x, Ax = b \Rightarrow AA^\dagger A x = Ax = b \Rightarrow AA^\dagger b = b
+    \end{split}
+\end{equation*}
+\subsubsection*{(b)}
+First showo that: 
+\begin{equation*}
+    \begin{split}
+        \Sigma ^ \dagger \Sigma = diag(1, ..., 1, 0, .., 0)
+    \end{split}
+\end{equation*}
+Since the system is consistent
+\begin{equation*}
+    \begin{split}
+        A^\dagger Ax = A^\dagger b 
+    \end{split}
+\end{equation*}
+So we get, $U, V, U^*, V^* $ are isometry.
+\begin{equation*}
+    \begin{split}
+        \|A^\dagger b \| &= \| A^\dagger Ax \| = \|V \Sigma ^ \dagger U^* U \Sigma V^* x\| = \| V \Sigma ^ \dagger \Sigma V^* x\| \\
+                        & = \| \Sigma ^ \dagger \Sigma V^*x \| \le \|I V^*x\| = \|V^*x\| = \|x\|
+    \end{split}
+\end{equation*}
+
+\subsubsection*{(c)}
+\begin{equation*}
+    \begin{split}
+        \forall v_0 \in kerA, Av_0 = 0 \Rightarrow (I_n - A^\dagger A)v_0 = v_0 - 0 = v_0 \Rightarrow v_0 \in C(I - A^\dagger A)
+    \end{split}
+\end{equation*}
+So we get 
+\begin{equation*}
+    \begin{split}
+        kerA \subset C(I - A^\dagger A)
+    \end{split}
+\end{equation*}
+For another side
+\begin{equation*}
+    \begin{split}
+       &\forall x \in C(I - A^\dagger A), x = (I - A^\dagger A)v_0 \Rightarrow Ax = A (I - A^\dagger A)v_0 = (A -  AA^\dagger A)v_0 = 0 \\
+        \Rightarrow & C(I - A^\dagger A) \subset kerA 
+    \end{split}
+\end{equation*}
+
+We get 
+\begin{equation*}
+    \begin{split}
+        C(I - A^\dagger A) = kerA 
+    \end{split}
+\end{equation*}
+
+Since $Ax = b$ is consistent, so $AA^\dagger b = b$, $A ^\dagger b$ is one of the solution. By \textbf{Proposition 2.42}
+\begin{equation*}
+    \begin{split}
+        \{ x \in F^n | Ax = b\} = \{ A^\dagger b + k | k \in KerA \} = \{ A^\dagger b + [I_n - A^\dagger A]w | w \in F^n \}
+    \end{split}
+\end{equation*}
 
 \subsection*{5.2.20}
-
+At each $ith$ position:
+\begin{equation*}
+    \begin{split}
+        \Sigma = \sum_{i = 1}^{i = r} diag(0, 0, ..., \sigma_i, 0..., 0)
+    \end{split}
+\end{equation*}
+So we get 
+\begin{equation*}
+    \begin{split}
+        A = U \Sigma V^* = U (\sum_{i = 1}^{i = r} diag(0, 0, ..., \sigma_i, 0..., 0))  V^* = \sum_{i = 1}^{i = r} u_i \sigma_i (v_i)* = \sum_{i = 1}^{i = r} \sigma_i u_i  (v_i)*
+    \end{split}
+\end{equation*}
 
 
 
