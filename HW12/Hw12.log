@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.13)  19 APR 2022 13:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.3.13)  22 APR 2022 15:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -225,36 +225,36 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 182--183
+Underfull \hbox (badness 10000) in paragraph at lines 180--181
 
  []
 
 [2]
-Overfull \hbox (16.29762pt too wide) in paragraph at lines 229--230
+Overfull \hbox (16.29762pt too wide) in paragraph at lines 227--228
 []\OT1/cmr/m/it/10 The or-thono-mal ba-sis of $\OML/cmm/m/it/10 V$ \OT1/cmr/m/it/10 is $\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 e[]; e[]; :::; e[]\OT1/cmr/m/n/10 )$\OT1/cmr/m/it/10 , and the or-thono-mal ba-sis of $\OML/cmm/m/it/10 W$ \OT1/cmr/m/it/10 is $\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 f[]; f[]; :::; f[]\OT1/cmr/m/n/10 )$\OT1/cmr/m/it/10 . 
  []
 
-LaTeX Font Info:    Trying to load font information for U+euf on input line 232.
+LaTeX Font Info:    Trying to load font information for U+euf on input line 230.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-) [3] [4]
+) [3] [4] [5] [6]
 \tf@thm=\write3
 \openout3 = `Hw12.thm'.
 
- [5] (/Users/wangzhihao/Desktop/Math416/HW12/Hw12.aux) ) 
+ [7] (/Users/wangzhihao/Desktop/Math416/HW12/Hw12.aux) ) 
 Here is how much of TeX's memory you used:
  2643 strings out of 478994
  36033 string characters out of 5858184
- 342123 words of memory out of 5000000
+ 351123 words of memory out of 5000000
  20126 multiletter control sequences out of 15000+600000
  412101 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,21n,74p,283b,309s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on /Users/wangzhihao/Desktop/Math416/HW12/Hw12.pdf (5 pages, 193458 bytes).
+Output written on /Users/wangzhihao/Desktop/Math416/HW12/Hw12.pdf (7 pages, 198408 bytes).
 PDF statistics:
- 96 PDF objects out of 1000 (max. 8388607)
- 69 compressed objects within 1 object stream
+ 104 PDF objects out of 1000 (max. 8388607)
+ 75 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

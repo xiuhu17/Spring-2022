@@ -144,8 +144,6 @@ The $ith$ column of $[R]_{B_v}$ is $[Rv_i]_{B_v}$.
     So, it is an isometry.
 \end{proof}
 
-\subsection*{4.5.8}  %%%%%%%%%%%%%%%%
-\subsection*{4.5.10} %%%%%%%%%%%%%%%%
 \subsection*{4.5.14}
 \subsubsection*{(a)}
 \begin{proof}
@@ -345,5 +343,123 @@ From \textbf{Eqution (1), and (3)}, I prove \begin{equation*}
         \mathop{min} \limits_{dimU = n - j + 1} \mathop{max} \limits _{v \in U, \|v\| = 1} \|Tv\| = \sigma_j
     \end{split}
 \end{equation*} 
+
+\subsection*{5.2.2}
+\subsubsection*{(a)}
+The singualr value of matrix $A$ is the sqrt root of eignvealue of  $AA^*$ or $AA^*$.
+\begin{equation*}
+    \begin{split}
+        \begin{bmatrix}
+            1 & -2 \\ 2 & 1
+        \end{bmatrix} \begin{bmatrix}
+            1 & 2 \\ -2 & 1
+        \end{bmatrix} = \begin{bmatrix}
+            5 & 0 \\ 0 & 5
+        \end{bmatrix}
+    \end{split}
+\end{equation*}
+Since it is an uppertraingular matrix, so the eignvalue is its diagonal, which is $5$. And it gets two independent eignvectors\\
+So the singualr value is $\sigma_1 = \sigma_2 = \sqrt{5}$.
+
+\subsubsection*{(b)}
+The singualr value of matrix $A$ is the sqrt root of eignvealue of  $AA^*$ or $AA^*$.
+\begin{equation*}
+    \begin{split}
+        \begin{bmatrix}
+            4 & -3 \\ 6 & 8
+        \end{bmatrix} \begin{bmatrix}
+            4 & 6 \\ -3 & 8
+        \end{bmatrix} = \begin{bmatrix}
+            25 & 0 \\ 0 & 100
+        \end{bmatrix}
+    \end{split}
+\end{equation*}
+Since it is an uppertraingular matrix, so the eignvalue is its diagonal, which is $25, 100$. And it gets two independent eignvectors\\
+So the singualr value is $\sigma_1 = 10, \sigma_2 = 5$.
+
+\subsubsection*{(c)}
+The singualr value of matrix $A$ is the sqrt root of eignvealue of  $AA^*$ or $AA^*$.
+\begin{equation*}
+    \begin{split}
+        \begin{bmatrix}
+            i & 0 & 0 \\ 0 & \sqrt{2} & 0
+        \end{bmatrix} \begin{bmatrix}
+            -i & 0 \\ 0 & \sqrt{2} \\ 0 & 0
+        \end{bmatrix} = \begin{bmatrix}
+            1 & 0 \\ 0 & 2
+        \end{bmatrix}
+    \end{split}
+\end{equation*}
+Since it is an uppertraingular matrix, so the eignvalue is its diagonal, which is $2, 1$.\\
+So the singualr value is $\sigma_1 = \sqrt{2}, \sigma_2 = 1$.
+
+\subsubsection*{(d)}
+The singualr value of matrix $A$ is the sqrt root of eignvealue of $AA^*$ or $AA^*$.
+\begin{equation*}
+    \begin{split}
+        \begin{bmatrix}
+            1 & 2 & 1 \\ 1 & -1 & 1
+        \end{bmatrix}\begin{bmatrix}
+            1 & 1 \\ 2 & -1 \\ 1 & 1
+        \end{bmatrix} = \begin{bmatrix}
+            6 & 0 \\ 0 & 3 
+        \end{bmatrix}
+    \end{split}
+\end{equation*}
+Since it is an uppertraingular matrix, so the eignvalue is its diagonal, which is $6, 3$.\\
+So the singualr value is $\sigma_1 = \sqrt{6}, \sigma_2 = \sqrt{3}$.
+
+\subsubsection*{(e)}
+The singualr value of matrix $A$ is the sqrt root of eignvealue of $AA^*$ or $AA^*$.
+\begin{equation*}
+    \begin{split}
+        \begin{bmatrix}
+            0 & 1 & 0 \\ 0 & 0 &2 \\ 3 & 0 & 0
+        \end{bmatrix} \begin{bmatrix}
+            0 & 0 & 3 \\ 1 & 0 & 0 \\ 0 & 2 & 0
+        \end{bmatrix} = \begin{bmatrix}
+            1 & 0 & 0 \\ 0 & 4 & 0 \\ 0 & 0 & 9
+        \end{bmatrix}
+    \end{split}
+\end{equation*}
+Since it is an uppertraingular matrix, so the eignvalue is its diagonal, which is$9, 4, 1$ \\
+So the singualr value is $\sigma_1 = 3, \sigma_2 = 2, \sigma_3 = 1$.
+
+\subsection*{5.2.8}
+By \textbf{Proposition 5.5}, we know the singular valeu of $A$ is positive sqrt root of eignvalue of $A^*A$ or $AA^*$.
+\begin{equation*}
+    \begin{split}
+        A^*A = \begin{bmatrix}
+            \lambda_1 & 0 & 0 & ... & 0 \\
+            0 & \lambda_2 & 0 & ... & 0 \\
+            0 & 0 & \lambda_3 & ... & 0 \\
+            ...\\
+            0 & 0 & 0 & ... & \lambda_n 
+        \end{bmatrix} \begin{bmatrix}
+            \overline{\lambda_1} & 0 & 0 & ... & 0 \\
+            0 & \overline{\lambda_2} & 0 & ... & 0 \\
+            0 & 0 & \overline{\lambda_3} & ... & 0 \\
+            ...\\
+            0 & 0 & 0 & ... & \overline{\lambda_n}
+        \end{bmatrix} = \begin{bmatrix}
+            |\lambda_1|^2 & 0 & 0 & ... & 0 \\
+            0 & |\lambda_2|^2 & 0 & ... & 0 \\
+            0 & 0 & |\lambda_3|^2 & ... & 0 \\
+            ...\\
+            0 & 0 & 0 & ... & |\lambda_n|^2
+        \end{bmatrix}
+    \end{split}
+\end{equation*}
+Since it is a diagonal matrix, so the eignvalue of $A^*A$ is its diagonal. Singualr value of $A$ is sqrt root of its eignvalue $\Rightarrow$
+The singular value of $A$ is $|\lambda_1|, |\lambda_2|, |\lambda_3|, ..., |\lambda_n|$
+
+
+
+\subsection*{5.2.16}
+
+\subsection*{5.2.20}
+
+
+
 
 \end{document}
