@@ -192,7 +192,7 @@ First use standard basis as $(e_1, e_2, e_3)$. Second use $(e_2, e_3)$ as basis 
     \end{split}
 \end{equation*}
 Since $rank T = 2$, so the $\sigma_1 = 1, \sigma_2 = 1$ \\
-The right vectors are $(e_1, e_3, e_2)$, left vectors are $(e_2, e_3)$, and $\sigma_1 = 1, \sigma_2 = 1$.
+The right vectors are $(e_1, e_3, e_2)$, left vectors are $(e_2, e_3)$, and $\sigma_1 = 1, \sigma_2 = 1, \sigma_3 =0$.
 
 \subsection*{5.1.6}
 
@@ -532,9 +532,17 @@ At each $ith$ position:
 So we get 
 \begin{equation*}
     \begin{split}
-        A = U \Sigma V^* = U (\sum_{i = 1}^{i = r} diag(0, 0, ..., \sigma_i, 0..., 0))  V^* = \sum_{i = 1}^{i = r} u_i \sigma_i (v_i)* = \sum_{i = 1}^{i = r} \sigma_i u_i  (v_i)*
+        A & = U \Sigma V^* = U (\sum_{i = 1}^{i = r} diag(0, 0, ..., \sigma_i, 0..., 0))  V^* \\
+        & = U\sum_{i = 1}^{i = r} diag(0, 0, ..., \sigma_i, 0..., 0)) V^* \\
+        & = U(\sum_{i = 1}^{i = r} \begin{bmatrix}
+            0^* \\ 0^* \\ ... \\ \sigma_i(V_i)^* \\ 0^* \\ ... \\ 0^*
+        \end{bmatrix}) = \sum_{i = 1}^{i = r} U \begin{bmatrix}
+            0^* \\ 0^* \\ ... \\ \sigma_i(V_i)^* \\ 0^* \\ ... \\ 0^*
+        \end{bmatrix} \\
+        & = \sum_{i = 1}^{i = r} u_i \sigma_i (v_i)^* = \sum_{i = 1}^{i = r} \sigma_i u_i  (v_i)^*
     \end{split}
 \end{equation*}
+
 
 
 

@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1650666949 "/Users/wangzhihao/Desktop/Math416/HW12/Hw12.tex" "/Users/wangzhihao/Desktop/Math416/HW12/Hw12.pdf" "Hw12" 1650666950
-  "/Users/wangzhihao/Desktop/Math416/HW12/Hw12.aux" 1650666950 1216 d94ba6e9955bc06a1470ae2a50ace8e4 ""
-  "/Users/wangzhihao/Desktop/Math416/HW12/Hw12.tex" 1650666948 19682 86f82797679e27ffc6333011dbf4970a ""
+["pdflatex"] 1650687589 "/Users/wangzhihao/Desktop/Math416/HW12/Hw12.tex" "/Users/wangzhihao/Desktop/Math416/HW12/Hw12.pdf" "Hw12" 1650687590
+  "/Users/wangzhihao/Desktop/Math416/HW12/Hw12.aux" 1650687590 1216 d94ba6e9955bc06a1470ae2a50ace8e4 ""
+  "/Users/wangzhihao/Desktop/Math416/HW12/Hw12.tex" 1650687589 20070 ef6243a4542cfae85ae265d8f365585b ""
   "/usr/local/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -72,12 +72,12 @@
   "/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1616695603 5169178 a2ce6e2d73f603b690db6777d06dbccb ""
   "/usr/local/texlive/2021/texmf-var/web2c/pdftex/pdflatex.fmt" 1647215156 2724734 dcb71411e321ef090b1790d4a971c521 ""
   "/usr/local/texlive/2021/texmf.cnf" 1616695596 577 4c1911a7228e554c6032256d3cf5567d ""
-  "Hw12.aux" 1650666950 1216 d94ba6e9955bc06a1470ae2a50ace8e4 "pdflatex"
-  "Hw12.tex" 1650666948 19682 86f82797679e27ffc6333011dbf4970a ""
+  "Hw12.aux" 1650687590 1216 d94ba6e9955bc06a1470ae2a50ace8e4 "pdflatex"
+  "Hw12.tex" 1650687589 20070 ef6243a4542cfae85ae265d8f365585b ""
   (generated)
-  "Hw12.aux"
-  "/Users/wangzhihao/Desktop/Math416/HW12/Hw12.log"
-  "/Users/wangzhihao/Desktop/Math416/HW12/Hw12.pdf"
-  "Hw12.log"
-  "Hw12.thm"
   "Hw12.pdf"
+  "/Users/wangzhihao/Desktop/Math416/HW12/Hw12.pdf"
+  "/Users/wangzhihao/Desktop/Math416/HW12/Hw12.log"
+  "Hw12.log"
+  "Hw12.aux"
+  "Hw12.thm"
