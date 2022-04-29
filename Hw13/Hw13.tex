@@ -202,4 +202,288 @@ Since the real part is zero, so it is purely imaginary. We can further prove tha
     \end{split}
 \end{equation*}
 \textbf{Contradiction}, so all of them are orthogonal.
+
+\subsection*{5.4.2}
+\subsubsection*{(a)}
+First check whether it is hermitian matrix.
+\begin{equation*}
+\begin{split}
+    \begin{bmatrix}
+        7 & 6 \\ 6 & -2
+    \end{bmatrix}^* = \begin{bmatrix}
+        7 & 6 \\ 6 & -2
+    \end{bmatrix}
+\end{split}
+\end{equation*}
+So it is a hermitian. So all the eignvalues are real.
+\begin{equation*}
+    \begin{split}
+        &\begin{bmatrix}
+            7 - \lambda& 6  \\ 6  & -2 - \lambda
+        \end{bmatrix} \stackrel{RREF}{\longrightarrow} \begin{bmatrix}
+            7 - \lambda& 6  \\ 0  &  \lambda ^ 2 - 5 \lambda - 50
+        \end{bmatrix} 
+        \Rightarrow \lambda_1 = 10, \lambda_2 = -5
+    \end{split}
+\end{equation*}
+So we get two eignvalues, with corrosponding eignvectors\begin{equation*}
+    \begin{split}
+        \begin{bmatrix}
+            2 \\ 1
+        \end{bmatrix}, \begin{bmatrix}
+            1 \\ -2
+        \end{bmatrix}
+    \end{split}
+\end{equation*}
+We can get the corrosponding othonormal basis 
+\begin{equation*}
+    \begin{split}
+        \frac{1}{\sqrt{5}}
+        \begin{bmatrix}
+            2 \\ 1
+        \end{bmatrix},
+        \frac{1}{\sqrt{5}}
+        \begin{bmatrix}
+            1 \\ -2
+        \end{bmatrix}
+    \end{split}
+\end{equation*}
+Finally,
+\begin{equation*}
+    \begin{split}
+        \begin{bmatrix}
+            7 & 6 \\ 6 & -2
+        \end{bmatrix} =  \begin{bmatrix}
+            \frac{2}{\sqrt{5}} & \frac{1}{\sqrt{5}} \\ \frac{1}{\sqrt{5}} & \frac{-2}{\sqrt{5}}
+        \end{bmatrix}\begin{bmatrix}
+            10 & 0 \\ 0 & -5 
+        \end{bmatrix} \begin{bmatrix}
+            \frac{2}{\sqrt{5}} & \frac{1}{\sqrt{5}} \\ \frac{1}{\sqrt{5}} & \frac{-2}{\sqrt{5}}
+        \end{bmatrix}
+    \end{split}
+\end{equation*}
+
+\subsubsection*{(b)}
+We find it is a normal matrix. Now we need to find 
+\begin{equation*}
+    \begin{split}
+        \begin{bmatrix}
+            1 - \lambda & i \\ i & 1 - \lambda
+        \end{bmatrix} \stackrel{RREF}{\longrightarrow} \begin{bmatrix}
+            1 - \lambda & i \\ 0 & \lambda^2 - 2\lambda + 2
+        \end{bmatrix} \Rightarrow \lambda_1 = 1 + i, \lambda_2 = 1 - i 
+    \end{split}
+\end{equation*}
+So the corrosponding two eignvectors are
+\begin{equation*}
+    \begin{split}
+        \frac{1}{\sqrt{2}}\begin{bmatrix}
+            1 \\ 1
+        \end{bmatrix},
+        \frac{1}{\sqrt{2}}\begin{bmatrix}
+            1 \\ -1
+        \end{bmatrix}
+    \end{split}
+\end{equation*}
+Finally, we get 
+\begin{equation*}
+    \begin{split}
+        \begin{bmatrix}
+            1  & i \\ i & 1 
+        \end{bmatrix} = \begin{bmatrix}
+            \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}} & \frac{-1}{\sqrt{2}}
+        \end{bmatrix}\begin{bmatrix}
+            1 + i & 0 \\ 0 & 1 - i
+        \end{bmatrix}\begin{bmatrix}
+            \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}} & \frac{-1}{\sqrt{2}}
+        \end{bmatrix}
+    \end{split}
+\end{equation*}
+
+\subsubsection*{(c)}
+We find it is a normal matrix. Now we need to find 
+\begin{equation*}
+    \begin{split}
+        &\begin{bmatrix}
+            1 - \lambda & 0 & 0 \\ 0 & -\lambda & 2 \\ 0 & 2 & -\lambda
+        \end{bmatrix} \stackrel{RREF}{\longrightarrow} \begin{bmatrix}
+            1 - \lambda & 0 & 0 \\ 0 & -\lambda & 2 \\ 0 & 0 & \lambda^2 - 4
+        \end{bmatrix}\\ & \Rightarrow \lambda_1 = 1, \lambda_1 = 2, \lambda_1 = -2
+    \end{split} 
+\end{equation*}
+So the corrosponding eignvectors are\begin{equation*}
+    \begin{split}
+        \begin{bmatrix}
+            1 \\ 0 \\ 0
+        \end{bmatrix}, \frac{1}{\sqrt{2}} \begin{bmatrix}
+            0 \\ 1 \\ 1
+        \end{bmatrix},\frac{1}{\sqrt{2}} \begin{bmatrix}
+            0 \\ -1 \\ 1
+        \end{bmatrix}
+    \end{split}
+\end{equation*}
+Finally we get 
+\begin{equation*}
+    \begin{split}
+        \begin{bmatrix}
+            1 & 0 & 0 \\ 0 & 0 & 2 \\ 0 & 2 & 0
+        \end{bmatrix} = \begin{bmatrix}
+            1 & 0 &0  \\ 0 & \frac{1}{\sqrt{2}} & \frac{-1}{\sqrt{2}} \\ 0 & \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}}
+        \end{bmatrix} \begin{bmatrix}
+            1 & 0 & 0 \\ 0 & 2 & 0 \\0 & 0 & -2 
+        \end{bmatrix}\begin{bmatrix}
+            1 & 0 &0  \\ 0 & \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} \\ 0 & \frac{-1}{\sqrt{2}} & \frac{1}{\sqrt{2}}
+        \end{bmatrix}
+    \end{split}
+\end{equation*}
+\subsection*{5.4.6}
+
+\noindent Since A is hermitian matrix, and is invertible, so all eignvalue of A are nonzero.
+\begin{suppose}
+    $A = Udiag(\lambda_1, ..., \lambda_n)U^*, \forall i \in {1, ..., n}, \lambda_i \ne 0$
+\end{suppose}
+Refer to the equation on \textbf{Page 324}
+\begin{equation*}
+    \begin{split}
+        f(A) = Udiag(f(\lambda_1), ... , f(\lambda_n))U^* \Rightarrow \frac{1}{A} = Udiag(\frac{1}{\lambda _1}, ... , \frac{1}{\lambda _n})U^*
+    \end{split} 
+\end{equation*}
+For $A^{-1}$, we get\begin{equation*}
+    \begin{split}
+        A^{-1} =  (Udiag(\lambda_1, ..., \lambda_n)U^*)^{-1} = Udiag(\frac{1}{\lambda _1}, ... , \frac{1}{\lambda _n})U^*
+    \end{split}
+\end{equation*}
+Therefore, we get\begin{equation*}
+    \begin{split}
+        \frac{1}{A} = A^{-1}
+    \end{split}
+\end{equation*}
+
+\subsection*{5.4.10}
+\subsubsection*{(a)}
+We need to prove \textbf{5.4.9} first. 
+\begin{suppose}
+    $B = Udiag(\lambda_1, ..., \lambda_n)U^*, \forall i \in {1, ..., n}, \lambda_i \ge 0$
+\end{suppose}
+If every eignvalue of Hermitian matrix is nonnegative.
+\begin{equation*}
+    \begin{split}
+        \langle Bx, x \rangle = \langle Udiag(\lambda_1, ..., \lambda_n)U^* x,x\rangle = \sum_{i = 1}^{i = n} \lambda_i | U^*x|^2 \ge 0
+    \end{split}
+\end{equation*}
+if $\langle Bx, x \rangle \ge 0, \forall x \in V$, when we set x as its eignvectors, 
+\begin{equation*}
+    \begin{split}
+        \langle Bx, x \rangle \ge 0 \Rightarrow \lambda_i\|x_i\|^2 \ge 0 \Rightarrow \lambda_i \ge 0
+    \end{split}
+\end{equation*} 
+Now for \textbf{5.4.10}, we can prove that $A^*A$ is hermitian.
+\begin{equation*}
+    \begin{split}
+        (A^*A)^* = A^*A
+    \end{split}
+\end{equation*}
+So we can get \begin{equation*}
+    \begin{split}
+        \langle A^*Ax, x \rangle = \langle Ax, Ax \rangle = \|Ax\|^2 \ge 0
+    \end{split}
+\end{equation*}
+So $A^*A$ is positive semidefinite.
+\subsubsection*{(b)}
+\textbf{FIRST METHOD:}
+Since $rankA = n$
+\begin{equation*}
+    \begin{split}
+        nullA = n - rankA = 0
+    \end{split}
+\end{equation*}
+Therefore, A is injective. 
+\begin{equation*}
+    \begin{split}
+        Ax = 0 \iff x = 0
+    \end{split}
+\end{equation*}
+If, $y \in kerA^*A$, by \textbf{Proposition 5.16}
+\begin{equation*}
+    \begin{split}
+        A^*Ay = 0 \iff Ay = 0, or \  Ay \in kerA^* \iff Ay = 0, or \  Ay \in (rangeA)^{\bot}
+    \end{split}
+\end{equation*}
+Because , $A \ne 0$ So we get\begin{equation*}
+    \begin{split}
+        \langle Ay, Ay \rangle = 0 \iff \|Ay\|^2 = 0 \iff y = 0
+    \end{split}
+\end{equation*}
+So $0$ can not be eignvalue of A,  all the eignvalue is positive. By \textbf{Conclusion from (a)} it is positive definite. \\ \\ 
+
+\textbf{SECOND METHOD:}
+Since $rankA = n$
+\begin{equation*}
+    \begin{split}
+        nullA = n - rankA = 0
+    \end{split}
+\end{equation*}
+Therefore, A is injective. 
+\begin{equation*}
+    \begin{split}
+        Ax = 0 \iff x = 0
+    \end{split}
+\end{equation*}
+So we can conclude that \begin{equation*}
+    \begin{split}
+        A^*Ay = 0 \Rightarrow \langle A^*Ay, y \rangle = 0 \iff \|Ay\|^2 = 0 \iff y = 0
+    \end{split}
+\end{equation*}
+So $0$ can not be eignvalue of A,  all the eignvalue is positive. By \textbf{Conclusion from (a)} it is positive definite. 
+
+\subsection*{5.4.22}
+\begin{suppose}
+    The random two distinct eignvaluesof $A$ are $\lambda_1, \lambda_2$, with two independent corrosponding eignvectors $x_1, x_2$, with 
+    coordinate $v_1, ..., v_n$ and $w_1, ..., w_n$. Write $e_1, ..., e_n$ as standard basis, which is also an orthonomal basis.
+\end{suppose}
+\begin{lemma}
+    Suppose
+    \begin{equation*}
+        \begin{split}
+            & Dx_1 = \sum_{i = 1}^{i = n} v_i \lambda_i e_i = \lambda_1x_1 = \sum_{i = 1}^{i = n} v_i \lambda_1 e_i \\
+            & \Rightarrow \sum_{i = 1}^{i = n} v_i (\lambda_i - \lambda_1) e_i = 0
+        \end{split}
+    \end{equation*}
+    Since $e_1, ..., e_n$ are independent, so that $v_i = 0$ when $\lambda_i \ne \lambda_1$. These statement also holds true for $x_2$. So we get 
+    \begin{equation*}
+        \begin{split}
+            x_1 = \stackrel{\lambda_i = \lambda_1}{\sum} v_ie_i, x_2 =  \stackrel{\lambda_i = \lambda_2}{\sum} 2_ie_i
+        \end{split}
+    \end{equation*}
+    Since $\{e_i | \lambda_i = \lambda_1\} \cap \{e_i | \lambda_i = \lambda_2\} = \emptyset$.
+    We get \begin{equation*}
+        \begin{split}
+            \langle x_1, x_2 \rangle = \langle \stackrel{\lambda_i = \lambda_1}{\sum} v_ie_i, \stackrel{\lambda_i = \lambda_2}{\sum} 2_ie_i\rangle = 0
+        \end{split}
+    \end{equation*}
+    Therefore, eignvectors with different eignvalues of diagonal matrix is orthogonal.
+\end{lemma}
+
+Since $A$ is a noormal matrix, by \textbf{Theorem 5.23}we can rewrite it as $A = UDU^*$, with $U, U^*$ is an unitary matrix.
+\begin{equation*}
+    \begin{split}
+       & Ax_1 = UDU^*x_1 = \lambda_1 x_1 \Rightarrow D(U^*x_1) = \lambda_1(U^*x_1) \\
+        & Ax_2 = UDU^*x_2 = \lambda_2 x_2 \Rightarrow D(U^*x_2) = \lambda_2(U^*x_2)
+    \end{split}
+\end{equation*}
+By \textbf{Theorem 4.25}
+\begin{equation*}
+    \begin{split}
+        \langle x_1, x_2 \rangle = \langle U^*(x_1), U^*(x_2) \rangle
+    \end{split}
+\end{equation*}
+Consider $U^*(x_1), U^*(x_2)$ as eignvectors of $D$ with different eignvalues $\lambda_1, \lambda_2$. 
+By the \textbf{Lemma}, we know that eignvec with diff eignvalues are orthogonal.
+\begin{equation*}
+    \begin{split}
+        \langle x_1, x_2 \rangle = \langle U^*(x_1), U^*(x_2) \rangle = 0
+    \end{split}
+\end{equation*} 
+So, eignvectors with different eignvalues of normal matrix is orthogonal
+
 \end{document}
