@@ -62,9 +62,144 @@
 \geometry{a4paper}
 \title{Homework11}
 \author{Zhihao Wang} 
-\date{04/22/2022}
 \begin{document}
 \maketitle 
 
+\subsection*{5.3.6}
+\begin{denote}
+    The adjoint $B$ as matrix $K \in M_n\mathbb{(C)}$.
+\end{denote}
+$\forall x, y \in \mathbb{C}^n$
+\begin{equation*}
+    \begin{split}
+         & \langle Bx, y \rangle_A = \langle ABx, Ay \rangle = \langle A^*ABx, y \rangle = \langle x, (A^*AB)^*y \rangle \\
+         & \langle x, Ky \rangle_A = \langle Ax, AKy \rangle = \langle x, A^*AKy \rangle \\
+         & \Rightarrow \langle x, ((A^*AB)^* - A^*AK)y \rangle = 0
+    \end{split}
+\end{equation*}
+Since $A$ is invertible, to $A^*$ is invertible, so well as $A^*A$. By \textbf{Proposition 4.2.4}
+\begin{equation*}
+    \begin{split}
+        ((A^*AB)^* - A^*AK)y = 0 \Rightarrow (A^*AB)^* - A^*AK = 0 \Rightarrow K = (A^*A)^{-1}B^*(A^*A)
+    \end{split}
+\end{equation*}
 
+\subsection*{5.3.8}
+\subsubsection*{(a)}
+\begin{equation*}
+    \begin{split}
+        \langle D(p), q \rangle & = \int_{- \infty}^{\infty} p'(x)q(x)e^{- \frac{x^2}{2}} \,dx = \int_{- \infty}^{\infty} q(x)e^{- \frac{x^2}{2}} \,d p(x) \\
+        & = p(x)q(x)e^{- \frac{x^2}{2}} |_{- \infty}^{\infty} - \int_{- \infty}^{\infty} p(x) \,d (q(x)e^{- \frac{x^2}{2}}) \\
+        & = - \int_{- \infty}^{\infty} p(x) \,d (q(x)e^{- \frac{x^2}{2}})
+        \\ & = - \int_{- \infty}^{\infty} p(x)(q'(x) - xq(x))e^{- \frac{x^2}{2}}dx
+        \\ & = \langle p, D^*(q) \rangle
+        \\ & \Rightarrow D^*(q(x)) =  -q'(x) + xq(x)
+    \end{split}
+\end{equation*}
+\subsubsection*{(b)}
+\begin{denote}
+    Basis $(1, x, ..., x^{n-1})$ is $B_v$. And Basis $(1, x, ..., x^{n})$ is $B_w$
+\end{denote}
+The $ith$ col of matrix of $D$ with respect of $B_v, B_w$ is 
+\begin{equation*}
+    \begin{split}
+        [D_i]_{B_w} = [D(x^{i-1})]_{B_w}
+    \end{split}
+\end{equation*}
+Therefore, the matrix is $n*(n+1)$
+\begin{equation*}
+    \begin{split}
+        D = \begin{bmatrix}
+            0 & 1 & 0 & 0 & ... & 0 \\
+            0 & 0 & 2 & 0 & ... & 0 \\
+            0 & 0 & 0 & 3 & ... & 0 \\
+            ... & ... & ... & ... & ... & ... \\
+            0 & 0 & 0 & 0 & ... & n
+        \end{bmatrix}
+    \end{split}
+\end{equation*}
+
+\subsubsection*{(c)}
+\begin{denote}
+    Basis $(1, x, ..., x^{n})$ is $B_w$. And Basis $(1, x, ..., x^{n - 1})$ is $B_v$
+\end{denote}
+The $ith$ col of matrix of $D$ with respect of $B_w, B_v$ is 
+\begin{equation*}
+    \begin{split}
+        [D^*_i]_{B_v} = [D^*(x^{i-1})]_{B_v} = [-(i-1)x^{i-2}+x^i]_{B_v}
+    \end{split}
+\end{equation*}
+Therefore, the matrix is $(n+1)*n$
+\begin{equation*}
+    \begin{split}
+        D = \begin{bmatrix}
+            0 & -1 & 0 & 0 & ... & 0 \\
+            1 & 0 & -2 & 0 & ... & 0 \\
+            0 & 1 & 0 & -3 & ... & 0 \\
+            0 & 0 & 1 & 0 & ... & 0 \\
+            ... & ... & ... & ... & ... & ... \\
+            0 & 0 & 0 & 0 & ... & 1
+        \end{bmatrix}
+    \end{split}
+\end{equation*}
+
+\subsubsection*{(d)}
+Since the basis we use are not orthonomal basis. For example
+\begin{equation*}
+    \begin{split}
+        \int_{- \infty}^{\infty} 1 * 1 * e^{- \frac{x^2}{2}}dx \neq 1 
+    \end{split}
+\end{equation*}
+
+\subsection*{5.3.12}
+Since it is a self adjoint Map, $T^* = T$.
+We can rewrite v as following
+\begin{equation*}
+    \begin{split}
+        v = T(v) + (v-T(v))
+    \end{split}
+\end{equation*}
+Now, consider $U = rangeT$, and we need to prove that $T(v)$ is orthogonal to $v-T(v)$
+\begin{equation*}
+    \begin{split}
+        \langle T(v), v-T(v) \rangle = \langle v, T^*(v-T(v)) \rangle = \langle v, T(v-T(v)) \rangle
+        = \langle v, T(v)-T^2(v) \rangle = 0
+    \end{split}
+\end{equation*}
+Therefore, $T(v)$ is orthogonal to $v-T(v)$, so we get $T$ is the orthogonal
+projection onto $U = range T$.
+
+\subsection*{5.3.18/19}
+\begin{suppose}
+    The random two distinct eignvalues are $\lambda_1, \lambda_2$, with two independent corrosponding eignvectors $v_1, v_2$.
+\end{suppose}
+\begin{equation*}
+    \begin{split}
+        \langle v_1 ,v_1 \rangle &= \frac{1}{\lambda_1} \langle T(v_1), v_1 \rangle = \frac{1}{\lambda_1} \langle v_1, T^*(v_1) \rangle\\
+         &= -\frac{1}{\lambda_1} \langle v_1, T(v_1) \rangle = -\frac{\overline{\lambda_1}}{\lambda_1} \langle v_1, v_1 \rangle
+         \\ 
+    \end{split}
+\end{equation*}
+So we get
+\begin{equation*}
+    \begin{split}
+        \overline{\lambda_1} = -\lambda_1 \Rightarrow  \overline{\lambda_1} + \lambda_1 = 0 = 2Re(\lambda_1)
+    \end{split}
+\end{equation*} 
+Since the real part is zero, so it is purely imaginary. We can further prove that
+\begin{equation*}
+    \begin{split}
+        \langle v_1 ,v_2 \rangle &= \frac{1}{\lambda_1} \langle T(v_1), v_2 \rangle = \frac{1}{\lambda_1} \langle v_1, T^*(v_2) \rangle\\
+         &= -\frac{1}{\lambda_1} \langle v_1, T(v_2) \rangle = -\frac{\overline{\lambda_2}}{\lambda_1} \langle v_1, v_2 \rangle
+    \end{split}
+\end{equation*} 
+\begin{denote}
+    $\lambda_1 = b_1i, \lambda_2 = b_2 i$
+\end{denote}
+\begin{equation*}
+    \begin{split}
+        -\frac{\overline{\lambda_2}}{\lambda_1} = 1 \Rightarrow b_2i = b_1i
+    \end{split}
+\end{equation*}
+\textbf{Contradiction}, so all of them are orthogonal.
 \end{document}
